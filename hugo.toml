@@ -1,6 +1,13 @@
 baseURL = 'https://azvasolutions.com/'
 languageCode = 'en-us'
 title = 'AZVA Solutions - Strategic Consulting & Digital Transformation'
+publishDir = 'public'
+ignoreLogs = ['warning-goldmark-raw-html']
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 
 [params]
   companyName = "AZVA Solutions"

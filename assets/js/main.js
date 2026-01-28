@@ -26,10 +26,10 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', function() {
         const currentScroll = window.pageYOffset;
 
-        if (currentScroll > 100) {
-            navbar.classList.add('shadow-lg');
+        if (currentScroll > 50) {
+            navbar.classList.add('scrolled', 'shadow-lg');
         } else {
-            navbar.classList.remove('shadow-lg');
+            navbar.classList.remove('scrolled', 'shadow-lg');
         }
 
         lastScroll = currentScroll;
