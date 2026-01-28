@@ -1,0 +1,33 @@
+baseURL = 'https://azvasolutions.com/'
+languageCode = 'en-us'
+title = 'AZVA Solutions - Strategic Consulting & Digital Transformation'
+
+[params]
+  companyName = "AZVA Solutions"
+  tagline = "Strategic Partner for Business Growth & Digital Transformation"
+  description = "Full-service consulting and solutions firm specializing in sales, marketing, technology, and finance. Your strategic partner for operational excellence and informed decision-making."
+  location = "Dubai, UAE"
+  email = "info@azvasolutions.com"
+  phone = "+971 XX XXX XXXX"
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 2
+  [[menu.main]]
+    identifier = "services"
+    name = "Services"
+    url = "/services/"
+    weight = 3
+  [[menu.main]]
+    identifier = "contact"
+    name = "Contact"
+    url = "/contact/"
+    weight = 4

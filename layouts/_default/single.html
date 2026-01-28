@@ -1,0 +1,24 @@
+{{ define "main" }}
+<div class="page-header bg-primary text-white py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="display-4 fw-bold mb-3">{{ .Title }}</h1>
+                {{ if .Params.subtitle }}
+                <p class="lead">{{ .Params.subtitle }}</p>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <article class="content">
+                {{ .Content }}
+            </article>
+        </div>
+    </div>
+</div>
+{{ end }}
