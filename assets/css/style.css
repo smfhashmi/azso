@@ -221,12 +221,34 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
 }
 
+.transition-hover {
+    transition: all 0.3s ease;
+}
+
+.transition-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
 .service-icon {
     transition: transform 0.3s ease;
 }
 
-.service-card:hover .service-icon {
+.service-card:hover .service-icon,
+.transition-hover:hover .service-icon {
     transform: scale(1.1);
+}
+
+a.text-decoration-none .service-card {
+    color: inherit;
+}
+
+a.text-decoration-none .service-card h4 {
+    color: var(--dark-color);
+}
+
+a.text-decoration-none:hover .service-card h4 {
+    color: var(--primary-color);
 }
 
 /* Partner Logos */

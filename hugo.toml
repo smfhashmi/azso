@@ -1,6 +1,6 @@
 baseURL = 'https://azvasolutions.com/'
 languageCode = 'en-us'
-title = 'AZVA Solutions - Strategic Consulting & Digital Transformation'
+title = 'AZVA Solutions - Smarter Systems. Better Decisions. Real Results.'
 publishDir = 'public'
 ignoreLogs = ['warning-goldmark-raw-html']
 
@@ -11,8 +11,8 @@ ignoreLogs = ['warning-goldmark-raw-html']
 
 [params]
   companyName = "AZVA Solutions"
-  tagline = "Strategic Partner for Business Growth & Digital Transformation"
-  description = "Full-service consulting and solutions firm specializing in sales, marketing, technology, and finance. Your strategic partner for operational excellence and informed decision-making."
+  tagline = "Smarter Systems. Better Decisions. Real Results."
+  description = "We help businesses design, implement, and optimize intelligent management systems that streamline operations, improve decision-making, and drive sustainable growth. From AI-powered automation to ERP, CRM, and end-to-end marketing & sales optimization."
   location = "Dubai, UAE"
   email = "info@azvasolutions.com"
   phone = "+971 XX XXX XXXX"

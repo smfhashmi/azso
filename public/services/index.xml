@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home on AZVA Solutions - Smarter Systems. Better Decisions. Real Results.</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content in Home on AZVA Solutions - Smarter Systems. Better Decisions. Real Results.</description>
+    <title>Services on AZVA Solutions - Smarter Systems. Better Decisions. Real Results.</title>
+    <link>http://localhost:1313/services/</link>
+    <description>Recent content in Services on AZVA Solutions - Smarter Systems. Better Decisions. Real Results.</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/services/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Digital Advisory &amp; Strategy</title>
       <link>http://localhost:1313/services/digital-advisory-strategy/</link>
@@ -48,27 +48,6 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/services/resource-augmentation-talent-support/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&amp;amp;h=600&amp;amp;fit=crop&#34; alt=&#34;Resource Augmentation&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;strengthen-your-team-with-expert-talent&#34;&gt;Strengthen Your Team with Expert Talent&lt;/h2&gt;&#xA;&lt;p&gt;We provide experienced ERP, CRM, marketing, and business technology professionals to strengthen your internal teams during critical phases. Our consultants work on your side, integrating seamlessly with your organization to provide leadership, expertise, and execution support—without vendor bias.&lt;/p&gt;&#xA;&lt;h2 id=&#34;our-resource-augmentation-services&#34;&gt;Our Resource Augmentation Services&lt;/h2&gt;&#xA;&lt;h3 id=&#34;erp--crm-project-managers&#34;&gt;ERP &amp;amp; CRM Project Managers&lt;/h3&gt;&#xA;&lt;p&gt;Experienced project managers who lead ERP and CRM implementations, ensuring projects are delivered on time, on budget, and with measurable business value.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>About Us</title>
-      <link>http://localhost:1313/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/</guid>
-      <description>&lt;h2 id=&#34;who-we-are&#34;&gt;Who We Are&lt;/h2&gt;&#xA;&lt;p&gt;Your Partner in Intelligent Business Transformation&lt;/p&gt;&#xA;&lt;p&gt;We are a consulting and technology services firm specializing in AI-driven solutions, enterprise systems, and business process optimization.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&amp;amp;h=600&amp;amp;fit=crop&#34; alt=&#34;Business Team&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;our-focus&#34;&gt;Our Focus&lt;/h2&gt;&#xA;&lt;p&gt;Our focus is simple: &lt;strong&gt;help organizations work smarter, move faster, and scale confidently&lt;/strong&gt; — without locking them into specific vendors or platforms.&lt;/p&gt;&#xA;&lt;p&gt;We combine strategic consulting, deep system expertise, and hands-on support to deliver solutions that work in the real world.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Contact Us</title>
-      <link>http://localhost:1313/contact/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/contact/</guid>
-      <description>&lt;h2 id=&#34;get-in-touch&#34;&gt;Get In Touch&lt;/h2&gt;&#xA;&lt;p&gt;We&amp;rsquo;d love to hear from you. Whether you have a question about our services, need a consultation, or want to discuss how we can help transform your business, we&amp;rsquo;re here to help.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1200&amp;amp;h=600&amp;amp;fit=crop&#34; alt=&#34;Contact&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;contact-information&#34;&gt;Contact Information&lt;/h2&gt;&#xA;&lt;div class=&#34;row g-4 my-4&#34;&gt;&#xA;    &lt;div class=&#34;col-md-4&#34;&gt;&#xA;        &lt;div class=&#34;card h-100 border-0 shadow-sm&#34;&gt;&#xA;            &lt;div class=&#34;card-body text-center p-4&#34;&gt;&#xA;                &lt;i class=&#34;bi bi-geo-alt-fill text-primary fs-1 mb-3&#34;&gt;&lt;/i&gt;&#xA;                &lt;h5 class=&#34;fw-bold mb-3&#34;&gt;Location&lt;/h5&gt;&#xA;                &lt;p class=&#34;text-muted mb-0&#34;&gt;Dubai, UAE&lt;/p&gt;&#xA;            &lt;/div&gt;&#xA;        &lt;/div&gt;&#xA;    &lt;/div&gt;&#xA;    &lt;div class=&#34;col-md-4&#34;&gt;&#xA;        &lt;div class=&#34;card h-100 border-0 shadow-sm&#34;&gt;&#xA;            &lt;div class=&#34;card-body text-center p-4&#34;&gt;&#xA;                &lt;i class=&#34;bi bi-envelope-fill text-primary fs-1 mb-3&#34;&gt;&lt;/i&gt;&#xA;                &lt;h5 class=&#34;fw-bold mb-3&#34;&gt;Email&lt;/h5&gt;&#xA;                &lt;p class=&#34;text-muted mb-0&#34;&gt;&#xA;                    &lt;a href=&#34;mailto:info@azvasolutions.com&#34; class=&#34;text-decoration-none&#34;&gt;info@azvasolutions.com&lt;/a&gt;&#xA;                &lt;/p&gt;&#xA;            &lt;/div&gt;&#xA;        &lt;/div&gt;&#xA;    &lt;/div&gt;&#xA;    &lt;div class=&#34;col-md-4&#34;&gt;&#xA;        &lt;div class=&#34;card h-100 border-0 shadow-sm&#34;&gt;&#xA;            &lt;div class=&#34;card-body text-center p-4&#34;&gt;&#xA;                &lt;i class=&#34;bi bi-telephone-fill text-primary fs-1 mb-3&#34;&gt;&lt;/i&gt;&#xA;                &lt;h5 class=&#34;fw-bold mb-3&#34;&gt;Phone&lt;/h5&gt;&#xA;                &lt;p class=&#34;text-muted mb-0&#34;&gt;&#xA;                    &lt;a href=&#34;tel:+971XXXXXXXXX&#34; class=&#34;text-decoration-none&#34;&gt;+971 XX XXX XXXX&lt;/a&gt;&#xA;                &lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Our Services</title>
-      <link>http://localhost:1313/services/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/services/</guid>
-      <description>&lt;h2 id=&#34;smarter-systems-better-decisions-real-results&#34;&gt;Smarter Systems. Better Decisions. Real Results.&lt;/h2&gt;&#xA;&lt;p&gt;We help businesses design, implement, and optimize intelligent management systems that streamline operations, improve decision-making, and drive sustainable growth.&lt;/p&gt;&#xA;&lt;p&gt;From AI-powered automation to ERP, CRM, and end-to-end marketing &amp;amp; sales optimization, we turn complex technology into practical business solutions.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&amp;amp;h=600&amp;amp;fit=crop&#34; alt=&#34;Business Solutions&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;our-core-services&#34;&gt;Our Core Services&lt;/h2&gt;&#xA;&lt;div class=&#34;row g-4 my-5&#34;&gt;&#xA;&lt;div class=&#34;col-md-6 col-lg-4&#34;&gt;&#xA;&lt;div class=&#34;card h-100 shadow-sm border-0&#34;&gt;&#xA;&lt;div class=&#34;card-body p-4&#34;&gt;&#xA;&lt;h3 class=&#34;h4 fw-bold mb-3&#34;&gt;Digital Advisory &amp; Strategy&lt;/h3&gt;&#xA;&lt;p class=&#34;text-muted mb-4&#34;&gt;Strategic guidance for intelligent business transformation. Vendor-neutral consulting that puts your business interests first.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

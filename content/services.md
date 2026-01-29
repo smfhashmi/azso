@@ -1,139 +1,112 @@
 ---
 title: "Our Services"
-subtitle: "Comprehensive Solutions for Business Excellence"
+subtitle: "Intelligent Management & Consulting Services"
 ---
 
-## Comprehensive Consulting & Solutions
+## Smarter Systems. Better Decisions. Real Results.
 
-AZVA Solutions offers end-to-end consulting and solutions across multiple business domains. We act as your strategic partner, conducting thorough assessments and providing actionable recommendations to drive growth and operational excellence.
+We help businesses design, implement, and optimize intelligent management systems that streamline operations, improve decision-making, and drive sustainable growth.
 
-![Business Consulting](https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop)
+From AI-powered automation to ERP, CRM, and end-to-end marketing & sales optimization, we turn complex technology into practical business solutions.
+
+![Business Solutions](https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop)
 
 ## Our Core Services
 
-### Sales & Marketing Consulting {#sales-marketing}
+<div class="row g-4 my-5">
+<div class="col-md-6 col-lg-4">
+<div class="card h-100 shadow-sm border-0">
+<div class="card-body p-4">
+<h3 class="h4 fw-bold mb-3">Digital Advisory & Strategy</h3>
+<p class="text-muted mb-4">Strategic guidance for intelligent business transformation. Vendor-neutral consulting that puts your business interests first.</p>
+<a href="/services/digital-advisory-strategy/" class="btn btn-outline-primary">Learn More <i class="bi bi-arrow-right ms-2"></i></a>
+</div>
+</div>
+</div>
 
-We conduct comprehensive assessments of your sales and marketing operations to identify opportunities for growth and optimization.
+<div class="col-md-6 col-lg-4">
+<div class="card h-100 shadow-sm border-0">
+<div class="card-body p-4">
+<h3 class="h4 fw-bold mb-3">Business & Process Consulting</h3>
+<p class="text-muted mb-4">Optimize operations and drive sustainable growth. We help organizations work smarter, move faster, and scale confidently.</p>
+<a href="/services/business-process-consulting/" class="btn btn-outline-primary">Learn More <i class="bi bi-arrow-right ms-2"></i></a>
+</div>
+</div>
+</div>
 
-**What We Offer:**
-- Sales process analysis and optimization
-- Marketing strategy development
-- Customer relationship management (CRM) implementation
-- Sales team training and development
-- Market research and competitive analysis
-- Lead generation and conversion optimization
+<div class="col-md-6 col-lg-4">
+<div class="card h-100 shadow-sm border-0">
+<div class="card-body p-4">
+<h3 class="h4 fw-bold mb-3">Intelligent AI Solutions</h3>
+<p class="text-muted mb-4">AI-driven solutions that enhance decision-making and automate operations. Turn complex technology into practical business solutions.</p>
+<a href="/services/intelligent-ai-solutions/" class="btn btn-outline-primary">Learn More <i class="bi bi-arrow-right ms-2"></i></a>
+</div>
+</div>
+</div>
 
-**Benefits:**
-- Increased revenue and market share
-- Improved customer acquisition and retention
-- Enhanced sales team performance
-- Better alignment between sales and marketing
+<div class="col-md-6 col-lg-4">
+<div class="card h-100 shadow-sm border-0">
+<div class="card-body p-4">
+<h3 class="h4 fw-bold mb-3">Custom Software Development</h3>
+<p class="text-muted mb-4">Tailored software solutions built for your business. When off-the-shelf solutions don't fit, we build exactly what you need.</p>
+<a href="/services/custom-software-development/" class="btn btn-outline-primary">Learn More <i class="bi bi-arrow-right ms-2"></i></a>
+</div>
+</div>
+</div>
 
----
+<div class="col-md-6 col-lg-4">
+<div class="card h-100 shadow-sm border-0">
+<div class="card-body p-4">
+<h3 class="h4 fw-bold mb-3">Managed Services & Operations</h3>
+<p class="text-muted mb-4">Ongoing support and optimization for your systems. Ensure your systems run smoothly and continue delivering value.</p>
+<a href="/services/managed-services-operations/" class="btn btn-outline-primary">Learn More <i class="bi bi-arrow-right ms-2"></i></a>
+</div>
+</div>
+</div>
 
-### Technology Solutions {#technology}
-
-Our team specializes in digital transformation, helping businesses leverage technology to achieve their goals.
-
-**Our Technology Expertise:**
-
-#### Enterprise Resource Planning (ERP)
-Implementation, customization, and optimization of ERP systems to streamline business processes.
-
-#### Customer Relationship Management (CRM)
-CRM strategy, implementation, and integration to improve customer relationships and sales performance.
-
-#### Content Management Systems
-Enterprise content management solutions for document control, workflow automation, and information governance.
-
-#### Robotics Process Automation (RPA)
-Automation of repetitive tasks to improve efficiency and reduce errors.
-
-#### Artificial Intelligence (AI)
-AI solutions for predictive analytics, intelligent automation, and data-driven decision making.
-
-#### Custom Development
-Design and development of custom software solutions and mobile applications tailored to your specific needs.
-
-**Technology Platforms We Work With:**
-- Oracle
-- Microsoft
-- SAP
-- OpenText
-- Hyland
-- DocuWare
-- Kofax
-- ABBYY
-
----
-
-### Finance Consulting {#finance}
-
-Comprehensive financial assessments and strategic guidance to support informed decision-making.
-
-**Services Include:**
-- Financial analysis and reporting
-- Budget planning and forecasting
-- Cost optimization strategies
-- Financial process improvement
-- Risk assessment and management
-- Investment analysis and recommendations
-
-**Outcomes:**
-- Better financial visibility and control
-- Optimized costs and improved profitability
-- Informed strategic decisions
-- Reduced financial risks
-
----
-
-### Operations Excellence {#operations}
-
-We analyze your operations, processes, and workflows to identify inefficiencies and opportunities for improvement.
-
-**Our Approach:**
-- Process mapping and analysis
-- Workflow optimization
-- Efficiency assessments
-- Quality management
-- Performance metrics and KPIs
-- Continuous improvement programs
-
-**Results:**
-- Streamlined operations
-- Reduced waste and costs
-- Improved quality and consistency
-- Enhanced productivity
-- Measurable performance improvements
-
----
-
-## Our Methodology
-
-### 1. Assessment
-We begin with a comprehensive assessment of your current state, understanding your business, challenges, and goals.
-
-### 2. Analysis
-Deep analysis of your operations, processes, technology, and financials to identify opportunities and risks.
-
-### 3. Recommendations
-Actionable recommendations tailored to your specific needs and objectives.
-
-### 4. Implementation
-End-to-end support for implementing solutions, from planning to execution.
-
-### 5. Optimization
-Ongoing support and optimization to ensure continued success and improvement.
+<div class="col-md-6 col-lg-4">
+<div class="card h-100 shadow-sm border-0">
+<div class="card-body p-4">
+<h3 class="h4 fw-bold mb-3">Resource Augmentation & Talent Support</h3>
+<p class="text-muted mb-4">Experienced professionals to strengthen your team. Work alongside your organization without vendor bias.</p>
+<a href="/services/resource-augmentation-talent-support/" class="btn btn-outline-primary">Learn More <i class="bi bi-arrow-right ms-2"></i></a>
+</div>
+</div>
+</div>
+</div>
 
 ## Why Choose Our Services
 
-- **Deep Expertise** - Specialists in sales, marketing, technology, and finance
-- **Proven Platforms** - Working with industry-leading technology platforms
-- **Custom Solutions** - Tailored solutions for your unique requirements
-- **Full Capability** - From strategy to implementation and support
-- **Risk Mitigation** - Avoid costly mistakes with expert guidance
-- **Measurable Results** - Focus on outcomes that matter to your business
+### Technology That Works for Your Business — Not the Other Way Around
+
+✅ **Vendor-neutral consulting** - We represent your interests, not vendors
+✅ **Practical, business-first approach** - Solutions designed for real-world results
+✅ **Scalable solutions** - Designed for growth and change
+✅ **Experienced consultants** - Deep expertise across industries
+✅ **Focus on measurable outcomes** - Not buzzwords, just results
+
+We don't sell tools. We design solutions that fit your business.
+
+## How We Work
+
+### A Clear, Proven Approach
+
+1. **Understand** - We learn your business, challenges, and goals
+2. **Design** - We architect the right solution, not just the latest tech
+3. **Implement** - We work alongside your team to deliver real results
+4. **Optimize** - We refine, scale, and continuously improve
+
+## Industries We Serve
+
+We work with organizations across multiple industries, including:
+
+- **FMCG** - Fast-moving consumer goods
+- **Healthcare** - Healthcare providers and systems
+- **Manufacturing & Distribution** - Production and supply chain
+- **Retail & E-commerce** - Customer-facing operations
+- **Financial & Business Services** - Financial institutions and services
+- **Commodity Trading** - Trading and commodity management
 
 ## Get Started
 
-Ready to transform your business? [Contact us](/contact/) to discuss your needs and learn how we can help you achieve your goals.
+Ready to transform your business? [Contact us](/contact/) to discuss your needs and learn how we can help you achieve efficiency, growth, and measurable results.
