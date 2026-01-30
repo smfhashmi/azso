@@ -1,64 +1,71 @@
 ---
 title: "About Us"
-subtitle: "Your Strategic Partner for Business Excellence"
+type: about
+hero_title: "Crafting Excellence Together"
+hero_lead: "We partner with organizations to deliver intelligent management and technology solutions combining strategy, systems, and support that drive real results."
+hero_bg_image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&h=1080&fit=crop"
+hero_image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop"
+stats:
+  - value: "150+"
+    label: "Projects Delivered"
+  - value: "100+"
+    label: "Happy Clients"
+  - value: "200+"
+    label: "Experts On Board"
+  - value: "20+"
+    label: "Years Experience"
+mission_title: "Our Mission"
+mission_text: "To empower organizations with intelligent management and technology solutions that drive clarity, efficiency, and sustainable growth. We focus on real-world results and lasting partnerships."
+mission_image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=500&fit=crop"
+mission_bullets:
+  - "Vendor-neutral consulting in your best interest"
+  - "Strategy and technology aligned with your goals"
+  - "Measurable outcomes and continuous improvement"
+vision_title: "Our Vision"
+vision_text: "To be the trusted partner for businesses seeking to transform operations through strategy, technology, and human expertise. We set the bar for quality and delivery."
+vision_image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop"
+vision_images:
+  - "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=300&fit=crop"
+  - "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop"
+  - "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop"
+vision_bullets:
+  - "Trusted advisor for transformation"
+  - "Technology that works for your business"
+  - "Scalable, sustainable growth"
+history_title: "Our History"
+history_text: "AZVA Solutions was built on the belief that organizations deserve partners who put their interests first. Our journey reflects our commitment to excellence and client success."
+history_image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=500&fit=crop"
+history_bullets:
+  - "Founded on integrity and expertise"
+  - "Growth driven by client outcomes"
+  - "Expanding capabilities and industry reach"
+how_title: "How We Do Work"
+how_image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&h=500&fit=crop"
+team_heading: "Let's Meet Our Experts"
+team_subtitle: "Get the right consultation from AZVA Solutions. We are here to support you as per your business need."
+team:
+  - name: "Wade Warren"
+    role: "Consulting Lead"
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face"
+  - name: "Jerome Bell"
+    role: "Technology Director"
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face"
+  - name: "Arlene McCoy"
+    role: "Strategy Advisor"
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=face"
+  - name: "Jane Cooper"
+    role: "Operations Lead"
+    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&h=200&fit=crop&crop=face"
+testimonials_heading: "Why Say Our Customers"
+testimonials:
+  - name: "Esther Howard"
+    quote: "AZVA Solutions delivered exactly what we needed. Their team understood our business and provided solutions that have made a real difference to our operations."
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face"
+  - name: "Robert Fox"
+    quote: "Professional, responsive, and results-driven. We have partnered with them on multiple projects and the quality has been consistently high."
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face"
+  - name: "Kathryn Murphy"
+    quote: "From strategy to implementation, AZVA Solutions supported us every step of the way. Highly recommend for anyone looking for a trusted technology partner."
+    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=80&h=80&fit=crop&crop=face"
+footer_headline: "Let's Create Your Ideal Space"
 ---
-
-## Who We Are
-
-AZVA Solutions is a full-service consulting and solutions firm, acting as a strategic partner and client advocate for businesses seeking growth, operational excellence, and informed decision-making. Based in Dubai, UAE, we serve clients across the region and beyond, helping them navigate the complexities of modern business.
-
-![Business Team](https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&h=600&fit=crop)
-
-## Our Mission
-
-We conduct comprehensive assessments of sales, marketing, technology, and finance, analyze operations, processes, and workflows, and provide insightful guidance and recommendations to help clients achieve efficiency, growth, and measurable results.
-
-## Our Expertise
-
-Our team brings deep expertise in multiple domains:
-
-### Sales & Marketing
-Strategic assessments and optimization of sales and marketing operations to drive growth and improve customer engagement.
-
-### Technology Solutions
-Specialists in ERP, CRM, Content Management, Robotics Process Automation (RPA), Artificial Intelligence (AI), and other digital transformation solutions.
-
-### Finance Consulting
-Comprehensive financial assessments and strategic guidance for informed decision-making, cost optimization, and financial planning.
-
-### Operations Excellence
-Analysis of operations, processes, and workflows to achieve efficiency, reduce waste, and deliver measurable results.
-
-## Technology Platforms
-
-We provide end-to-end consulting and solutions, leveraging industry-leading platforms:
-
-- **Oracle** - Enterprise resource planning and database solutions
-- **Microsoft** - Cloud services, productivity tools, and business applications
-- **SAP** - Enterprise software and business process management
-- **OpenText** - Enterprise information management
-- **Hyland** - Content services and case management
-- **DocuWare** - Document management and workflow automation
-- **Kofax** - Intelligent automation and document capture
-- **ABBYY** - Digital intelligence and document processing
-
-## Custom Solutions
-
-Beyond standard platforms, we design and build custom solutions and mobile applications tailored to each client's unique needs. Our full-fledged development capability ensures that we can deliver exactly what your business requires.
-
-## Why Work With Us
-
-With years of experience and a dedicated team of domain experts, AZVA Solutions helps businesses:
-
-- **Save Time** - Streamlined processes and efficient workflows
-- **Reduce Costs** - Optimized operations and smart technology choices
-- **Avoid Risks** - Expert guidance to prevent costly mistakes
-- **Achieve Growth** - Strategic planning and execution for sustainable success
-
-## Our Commitment
-
-We are committed to being your strategic partner, not just a service provider. We take the time to understand your business, your challenges, and your goals. Our recommendations are always in your best interest, ensuring confident, efficient, and sustainable business growth.
-
-## Get In Touch
-
-Ready to transform your business? [Contact us](/contact/) today to discuss how we can help you achieve your goals.

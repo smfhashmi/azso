@@ -1,0 +1,66 @@
+{{ define "main" }}
+<div>
+  <header class="services-hero" {{ with .Params.hero_image }}style="background-image: url('{{ . }}');"{{ end }}>
+    <div class="services-hero-overlay"></div>
+    <div class="container position-relative">
+      <h1 class="services-hero-title">{{ .Params.hero_title | default .Title }}</h1>
+      {{ with .Params.hero_lead }}
+        <p class="services-hero-lead">{{ . }}</p>
+      {{ end }}
+      {{ with .Params.hero_subtext }}
+        <p class="services-hero-subtext">{{ . }}</p>
+      {{ end }}
+    </div>
+  </header>
+
+  <section class="luxury-section luxury-section-alt" data-reveal>
+    <div class="container">
+      {{ with .Content }}
+      <div class="row mb-5">
+        <div class="col-lg-10 mx-auto text-center clarity-prose">
+          {{ . }}
+        </div>
+      </div>
+      {{ end }}
+      <div class="row mb-5">
+        <div class="col-lg-10 mx-auto text-center">
+          <p class="section-label mb-2">Business Solutions</p>
+          <h2 class="luxury-section-title">Our Core Services</h2>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          {{ partial "service-card.html" (dict "title" "Digital Advisory & Strategy" "summary" "Strategic guidance for intelligent business transformation. Vendor-neutral consulting that puts your business interests first." "url" "/services/digital-advisory-strategy/" "icon" "bi-lightbulb") }}
+        </div>
+        <div class="col-md-6 col-lg-4">
+          {{ partial "service-card.html" (dict "title" "Business & Process Consulting" "summary" "Optimize operations and drive sustainable growth. We help organizations work smarter, move faster, and scale confidently." "url" "/services/business-process-consulting/" "icon" "bi-briefcase") }}
+        </div>
+        <div class="col-md-6 col-lg-4">
+          {{ partial "service-card.html" (dict "title" "Intelligent AI Solutions" "summary" "AI-driven solutions that enhance decision-making and automate operations. Turn complex technology into practical business solutions." "url" "/services/intelligent-ai-solutions/" "icon" "bi-cpu") }}
+        </div>
+        <div class="col-md-6 col-lg-4">
+          {{ partial "service-card.html" (dict "title" "Custom Software Development" "summary" "Tailored software solutions built for your business. When off-the-shelf solutions don't fit, we build exactly what you need." "url" "/services/custom-software-development/" "icon" "bi-code-slash") }}
+        </div>
+        <div class="col-md-6 col-lg-4">
+          {{ partial "service-card.html" (dict "title" "Managed Services & Operations" "summary" "Ongoing support and optimization for your systems. Ensure your systems run smoothly and continue delivering value." "url" "/services/managed-services-operations/" "icon" "bi-gear-wide-connected") }}
+        </div>
+        <div class="col-md-6 col-lg-4">
+          {{ partial "service-card.html" (dict "title" "Resource Augmentation & Talent Support" "summary" "Experienced professionals to strengthen your team. Work alongside your organization without vendor bias." "url" "/services/resource-augmentation-talent-support/" "icon" "bi-people") }}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="luxury-cta" data-reveal>
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-8">
+          <h2 class="luxury-cta-title">Get Started</h2>
+          <p class="luxury-cta-lead">Ready to transform your business? Contact us to discuss your needs and learn how we can help you achieve efficiency, growth, and measurable results.</p>
+          <a href="{{ `/contact/` | relURL }}" class="btn btn-primary btn-lg luxury-btn">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+{{ end }}

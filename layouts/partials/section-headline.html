@@ -1,0 +1,7 @@
+{{ $overline := .overline }}
+{{ $title := .title }}
+{{ $class := .class | default "" }}
+<div class="{{ $class }}">
+  {{ with $overline }}<p class="azva-section-overline mb-0">{{ . }}</p>{{ end }}
+  <h2 class="azva-section-title mb-0">{{ $title }}</h2>
+</div>

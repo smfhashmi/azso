@@ -1,95 +1,97 @@
-// Main JavaScript for AZVA Solutions
+/**
+ * Azva Solutions — Hugo site (Clarity UI)
+ * Header scroll state, scroll reveal, contact form, back-to-top, newsletter.
+ */
+(function () {
+  'use strict';
 
-document.addEventListener('DOMContentLoaded', function() {
+  var header = document.getElementById('azva-header');
+  if (header) {
+    window.addEventListener('scroll', function () {
+      header.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+  }
 
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            const href = this.getAttribute('href');
-            if (href !== '#' && href.startsWith('#')) {
-                e.preventDefault();
-                const target = document.querySelector(href);
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            }
+  var revealEls = document.querySelectorAll('[data-reveal]');
+  var aboutRevealEls = document.querySelectorAll('.about-reveal');
+  var allReveal = [].slice.call(revealEls).concat([].slice.call(aboutRevealEls));
+  if (allReveal.length && 'IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) entry.target.classList.add('revealed');
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    allReveal.forEach(function (el) { observer.observe(el); });
+  }
+
+  // About page: stats count-up when in view
+  var aboutStats = document.getElementById('about-stats');
+  if (aboutStats && 'IntersectionObserver' in window) {
+    var statValues = aboutStats.querySelectorAll('.about-stat-v2-value[data-stat]');
+    var statsObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        statsObserver.disconnect();
+        statValues.forEach(function (el) {
+          var raw = el.getAttribute('data-stat') || el.textContent;
+          var match = raw.match(/^(\d+)(.*)$/);
+          if (!match) return;
+          var end = parseInt(match[1], 10);
+          var suffix = match[2] || '';
+          var duration = 1500;
+          var start = 0;
+          var startTime = null;
+          function step(timestamp) {
+            if (!startTime) startTime = timestamp;
+            var progress = Math.min((timestamp - startTime) / duration, 1);
+            var easeOut = 1 - Math.pow(1 - progress, 2);
+            var current = Math.round(start + (end - start) * easeOut);
+            el.textContent = current + suffix;
+            if (progress < 1) requestAnimationFrame(step);
+          }
+          requestAnimationFrame(step);
         });
+      });
+    }, { threshold: 0.3 });
+    statsObserver.observe(aboutStats);
+  }
+
+  // About page: video play button — scroll to Get in Touch CTA
+  var aboutVideoPlay = document.getElementById('about-video-play');
+  if (aboutVideoPlay) {
+    aboutVideoPlay.addEventListener('click', function () {
+      var cta = document.querySelector('.about-footer-v2-cta');
+      if (cta) cta.scrollIntoView({ behavior: 'smooth', block: 'center' });
     });
+  }
 
-    // Navbar scroll effect
-    const navbar = document.querySelector('.navbar');
-    let lastScroll = 0;
-
-    window.addEventListener('scroll', function() {
-        const currentScroll = window.pageYOffset;
-
-        if (currentScroll > 100) {
-            navbar.classList.add('shadow-lg');
-        } else {
-            navbar.classList.remove('shadow-lg');
-        }
-
-        lastScroll = currentScroll;
+  var form = document.getElementById('contactForm');
+  var formMessage = document.getElementById('formMessage') || document.getElementById('homeFormMessage');
+  if (form && formMessage) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      formMessage.textContent = "Thank you. We'll be in touch within one business day.";
+      formMessage.classList.remove('d-none');
+      form.reset();
+      formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     });
+  }
 
-    // Contact form handling
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
+  var backTop = document.getElementById('backTop');
+  if (backTop) {
+    window.addEventListener('scroll', function () {
+      backTop.classList.toggle('visible', window.scrollY > 400);
+    }, { passive: true });
+  }
 
-            const formMessage = document.getElementById('formMessage');
-            const formData = new FormData(contactForm);
-
-            // Simulate form submission (replace with actual form handling)
-            formMessage.innerHTML = `
-                <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    <i class="bi bi-check-circle me-2"></i>
-                    Thank you for your message! We'll get back to you soon.
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-            `;
-
-            contactForm.reset();
-
-            // Scroll to message
-            formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        });
-    }
-
-    // Intersection Observer for animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate-on-scroll');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    // Observe elements for animation
-    document.querySelectorAll('.service-card, .partner-logo, .card').forEach(el => {
-        observer.observe(el);
+  var newsletterForm = document.getElementById('newsletterForm');
+  var newsletterMessage = document.getElementById('newsletterMessage');
+  if (newsletterForm && newsletterMessage) {
+    newsletterForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      newsletterMessage.textContent = "Thanks for subscribing. We'll send updates to your email.";
+      newsletterMessage.classList.remove('d-none');
+      newsletterForm.reset();
     });
-
-    // Initialize tooltips if Bootstrap tooltips are used
-    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-    tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl);
-    });
-
-    // Initialize popovers if Bootstrap popovers are used
-    const popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
-    popoverTriggerList.map(function (popoverTriggerEl) {
-        return new bootstrap.Popover(popoverTriggerEl);
-    });
-
-});
+  }
+})();

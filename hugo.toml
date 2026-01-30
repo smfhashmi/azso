@@ -4,6 +4,7 @@ title = 'AZVA Solutions - Strategic Consulting & Digital Transformation'
 
 [params]
   companyName = "AZVA Solutions"
+  logo = "/images/logo.png"
   tagline = "Strategic Partner for Business Growth & Digital Transformation"
   description = "Full-service consulting and solutions firm specializing in sales, marketing, technology, and finance. Your strategic partner for operational excellence and informed decision-making."
   location = "Dubai, UAE"

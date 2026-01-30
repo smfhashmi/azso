@@ -1,0 +1,148 @@
+{{ define "main" }}
+<article class="about-page-v2">
+  <!-- Hero: optional bg image + heading + lead, then stats (hide right image when hero_bg_image set) -->
+  <section class="about-hero-v2 {{ with .Params.hero_bg_image }}about-hero-v2-bg{{ end }}" {{ with .Params.hero_bg_image }}style="background-image: url('{{ . }}');"{{ end }}>
+    {{ with .Params.hero_bg_image }}<div class="about-hero-v2-overlay"></div>{{ end }}
+    <div class="container {{ with .Params.hero_bg_image }}position-relative{{ end }}">
+      <div class="row align-items-center about-block-v2-tight {{ with .Params.hero_bg_image }}justify-content-center text-center{{ end }}">
+        <div class="{{ if .Params.hero_bg_image }}col-lg-9{{ else }}col-lg-6{{ end }} about-reveal">
+          <h1 class="about-hero-v2-title">{{ .Params.hero_title | default "Crafting Excellence Together" }}</h1>
+          {{ with .Params.hero_lead }}
+            <p class="about-hero-v2-lead">{{ . }}</p>
+          {{ end }}
+        </div>
+        {{ if not .Params.hero_bg_image }}
+        <div class="col-lg-6 about-reveal about-reveal-delay-1 about-block-v2-img-col">
+          <div class="about-hero-v2-image-wrap about-hover-img">
+            <img src="{{ .Params.hero_image | default "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop" }}" alt="" class="about-hero-v2-image">
+            <div class="about-hero-v2-icon"><i class="bi bi-gear-wide-connected"></i></div>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+      {{ $stats := .Params.stats }}
+      {{ if $stats }}
+        <div class="row g-3 g-md-4 about-stats-v2" id="about-stats">
+          {{ range $stat := $stats }}
+            <div class="col-6 col-md-3 about-reveal about-reveal-delay-2">
+              <div class="about-stat-v2">
+                <span class="about-stat-v2-value" data-stat="{{ $stat.value }}">{{ $stat.value }}</span>
+                <span class="about-stat-v2-label">{{ $stat.label }}</span>
+              </div>
+            </div>
+          {{ end }}
+        </div>
+      {{ end }}
+    </div>
+  </section>
+
+  <!-- Our Mission: image left, text right -->
+  <section class="about-block-v2 about-reveal">
+    <div class="container">
+      <div class="row align-items-center about-block-v2-tight">
+        <div class="col-lg-5 order-lg-1 about-block-v2-img-col">
+          <div class="about-block-v2-img-wrap about-hover-img">
+            <img src="{{ .Params.mission_image | default "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=500&fit=crop" }}" alt="Our mission" class="img-fluid rounded">
+          </div>
+        </div>
+        <div class="col-lg-6 order-lg-2 about-block-v2-content-col ms-lg-3">
+          <h2 class="about-block-v2-title">{{ .Params.mission_title | default "Our Mission" }}</h2>
+          {{ with .Params.mission_text }}
+            <p class="about-block-v2-text">{{ . }}</p>
+          {{ end }}
+          {{ with .Params.mission_bullets }}
+            <ul class="about-block-v2-list">
+              {{ range . }}<li>{{ . }}</li>{{ end }}
+            </ul>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Vision: text left, single image right -->
+  <section class="about-block-v2 about-block-v2-alt about-reveal">
+    <div class="container">
+      <div class="row align-items-center about-block-v2-tight">
+        <div class="col-lg-6 order-lg-1 about-block-v2-content-col me-lg-3">
+          <h2 class="about-block-v2-title">{{ .Params.vision_title | default "Our Vision" }}</h2>
+          {{ with .Params.vision_text }}
+            <p class="about-block-v2-text">{{ . }}</p>
+          {{ end }}
+          {{ with .Params.vision_bullets }}
+            <ul class="about-block-v2-list">
+              {{ range . }}<li>{{ . }}</li>{{ end }}
+            </ul>
+          {{ end }}
+        </div>
+        <div class="col-lg-5 order-lg-2 about-block-v2-img-col">
+          <div class="about-block-v2-img-wrap about-hover-img">
+            <img src="{{ .Params.vision_image | default "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop" }}" alt="Our vision" class="img-fluid rounded">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our History: image left, text right -->
+  <section class="about-block-v2 about-reveal">
+    <div class="container">
+      <div class="row align-items-center about-block-v2-tight">
+        <div class="col-lg-5 order-lg-1 about-block-v2-img-col">
+          <div class="about-block-v2-img-wrap about-hover-img">
+            <img src="{{ .Params.history_image | default "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=500&fit=crop" }}" alt="Our history" class="img-fluid rounded">
+          </div>
+        </div>
+        <div class="col-lg-6 order-lg-2 about-block-v2-content-col ms-lg-3">
+          <h2 class="about-block-v2-title">{{ .Params.history_title | default "Our History" }}</h2>
+          {{ with .Params.history_text }}
+            <p class="about-block-v2-text">{{ . }}</p>
+          {{ end }}
+          {{ with .Params.history_bullets }}
+            <ul class="about-block-v2-list">
+              {{ range . }}<li>{{ . }}</li>{{ end }}
+            </ul>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How We Do Work: centered title + video image -->
+  <section class="about-how-v2 about-reveal">
+    <div class="container">
+      <h2 class="about-how-v2-title">{{ .Params.how_title | default "How We Do Work" }}</h2>
+      <div class="about-how-v2-video-wrap about-hover-img" id="about-video-wrap">
+        <img src="{{ .Params.how_image | default "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&h=500&fit=crop" }}" alt="" class="about-how-v2-poster">
+        <button type="button" class="about-how-v2-play" id="about-video-play" aria-label="Play video"><i class="bi bi-play-fill"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="about-testimonials-v2 about-reveal">
+    <div class="container">
+      <h2 class="about-testimonials-v2-title">{{ .Params.testimonials_heading | default "Why Say Our Customers" }}</h2>
+      {{ $testimonials := .Params.testimonials }}
+      {{ if $testimonials }}
+        <div class="row g-4">
+          {{ range $t := $testimonials }}
+            <div class="col-md-4 about-reveal about-reveal-delay-1">
+              <div class="about-testimonial-v2-card about-interactive-card">
+                <div class="about-testimonial-v2-avatar">
+                  <img src="{{ $t.image | default "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face" }}" alt="{{ $t.name }}">
+                </div>
+                <strong class="d-block about-testimonial-v2-name">{{ $t.name }}</strong>
+                <div class="about-testimonial-v2-stars">
+                  {{ range seq 5 }}<i class="bi bi-star-fill"></i>{{ end }}
+                </div>
+                <p class="about-testimonial-v2-quote mb-0">{{ $t.quote }}</p>
+              </div>
+            </div>
+          {{ end }}
+        </div>
+      {{ end }}
+    </div>
+  </section>
+</article>
+{{ end }}

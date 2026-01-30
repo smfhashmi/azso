@@ -1,0 +1,24 @@
+{{/* Local variables only - no page context */}}
+{{ $s1 := dict "title" "Understand" "body" "We start by deeply understanding your business, challenges, and goals." }}
+{{ $s2 := dict "title" "Design" "body" "We design systems and strategies tailored to your context." }}
+{{ $s3 := dict "title" "Implement" "body" "We support implementation with clarity and discipline." }}
+{{ $s4 := dict "title" "Optimize" "body" "We help you continuously improve and deliver measurable results." }}
+{{ $steps := slice $s1 $s2 $s3 $s4 }}
+<section class="py-5" style="background: rgba(20, 20, 20, 0.5);">
+  <div class="container py-5">
+    {{ partial "section-headline.html" (dict "overline" "How We Work" "title" "A disciplined approach to transformation") }}
+    <div class="row mt-5">
+      <div class="col-lg-8">
+        <div class="azva-timeline">
+          {{ range $i, $step := $steps }}
+            <div class="azva-timeline-item azva-reveal" data-reveal>
+              <span class="azva-timeline-step">Step {{ add $i 1 }}</span>
+              <h3>{{ $step.title }}</h3>
+              <p>{{ $step.body }}</p>
+            </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

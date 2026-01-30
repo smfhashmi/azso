@@ -12,21 +12,84 @@
       <link>http://localhost:1313/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/about/</guid>
-      <description>&lt;h2 id=&#34;who-we-are&#34;&gt;Who We Are&lt;/h2&gt;&#xA;&lt;p&gt;AZVA Solutions is a full-service consulting and solutions firm, acting as a strategic partner and client advocate for businesses seeking growth, operational excellence, and informed decision-making. Based in Dubai, UAE, we serve clients across the region and beyond, helping them navigate the complexities of modern business.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&amp;amp;h=600&amp;amp;fit=crop&#34; alt=&#34;Business Team&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;our-mission&#34;&gt;Our Mission&lt;/h2&gt;&#xA;&lt;p&gt;We conduct comprehensive assessments of sales, marketing, technology, and finance, analyze operations, processes, and workflows, and provide insightful guidance and recommendations to help clients achieve efficiency, growth, and measurable results.&lt;/p&gt;</description>
+      <description></description>
     </item>
     <item>
-      <title>Contact Us</title>
+      <title>Business &amp; Process Consulting</title>
+      <link>http://localhost:1313/services/business-process-consulting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/services/business-process-consulting/</guid>
+      <description>We work with you to optimize operations, streamline processes, and drive sustainable growth. Our approach is practical and outcome-focused-helping you work smarter, move faster, and scale confidently.&#xA;What We Deliver Process assessment - Current-state analysis and improvement opportunities Operational design - Workflows and structures that scale Performance metrics - KPIs and governance that drive results Continuous improvement - Ongoing optimization and refinement Contact us to discuss your operations and growth goals.</description>
+    </item>
+    <item>
+      <title>Contact</title>
       <link>http://localhost:1313/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/contact/</guid>
-      <description>&lt;h2 id=&#34;get-in-touch&#34;&gt;Get In Touch&lt;/h2&gt;&#xA;&lt;p&gt;We&amp;rsquo;d love to hear from you. Whether you have a question about our services, need a consultation, or want to discuss how we can help transform your business, we&amp;rsquo;re here to help.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1200&amp;amp;h=600&amp;amp;fit=crop&#34; alt=&#34;Contact&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;contact-information&#34;&gt;Contact Information&lt;/h2&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h2 id=&#34;send-us-a-message&#34;&gt;Send Us a Message&lt;/h2&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h2 id=&#34;office-hours&#34;&gt;Office Hours&lt;/h2&gt;&#xA;&lt;!-- raw HTML omitted --&gt;</description>
+      <description>We&amp;rsquo;d like to hear from you. Use the form below or reach us directly.&#xA;Location: Dubai, UAE&#xA;Email: info@azvasolutions.com&#xA;Phone: +971 XX XXX XXXX</description>
     </item>
     <item>
-      <title>Our Services</title>
-      <link>http://localhost:1313/services/</link>
+      <title>Custom Software Development</title>
+      <link>http://localhost:1313/services/custom-software-development/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/services/</guid>
-      <description>&lt;h2 id=&#34;comprehensive-consulting--solutions&#34;&gt;Comprehensive Consulting &amp;amp; Solutions&lt;/h2&gt;&#xA;&lt;p&gt;AZVA Solutions offers end-to-end consulting and solutions across multiple business domains. We act as your strategic partner, conducting thorough assessments and providing actionable recommendations to drive growth and operational excellence.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&amp;amp;h=600&amp;amp;fit=crop&#34; alt=&#34;Business Consulting&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;our-core-services&#34;&gt;Our Core Services&lt;/h2&gt;&#xA;&lt;h3 id=&#34;sales-marketing&#34;&gt;Sales &amp;amp; Marketing Consulting&lt;/h3&gt;&#xA;&lt;p&gt;We conduct comprehensive assessments of your sales and marketing operations to identify opportunities for growth and optimization.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;What We Offer:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Sales process analysis and optimization&lt;/li&gt;&#xA;&lt;li&gt;Marketing strategy development&lt;/li&gt;&#xA;&lt;li&gt;Customer relationship management (CRM) implementation&lt;/li&gt;&#xA;&lt;li&gt;Sales team training and development&lt;/li&gt;&#xA;&lt;li&gt;Market research and competitive analysis&lt;/li&gt;&#xA;&lt;li&gt;Lead generation and conversion optimization&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Benefits:&lt;/strong&gt;&lt;/p&gt;</description>
+      <guid>http://localhost:1313/services/custom-software-development/</guid>
+      <description>When off-the-shelf solutions don&amp;rsquo;t fit, we build exactly what you need. Our custom software development delivers tailored solutions that align with your processes, scale with your growth, and integrate with your ecosystem.&#xA;What We Deliver Discovery &amp;amp; design - Requirements, architecture, and user experience Development - Secure, scalable applications built to your specifications Integration - Connections to ERP, CRM, and other enterprise systems Support &amp;amp; evolution - Ongoing maintenance and enhancement Contact us to discuss your custom software needs.</description>
+    </item>
+    <item>
+      <title>Digital Advisory &amp; Strategy</title>
+      <link>http://localhost:1313/services/digital-advisory-strategy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/services/digital-advisory-strategy/</guid>
+      <description>We help organizations navigate digital transformation with independent, vendor-neutral advice. Our strategic guidance puts your business interests first-from evaluation through implementation and optimization.&#xA;What We Deliver Strategy &amp;amp; roadmap - Clear direction aligned with your business goals Vendor evaluation - Unbiased assessment of platforms and partners Transformation planning - Phased, practical implementation roadmaps Governance &amp;amp; change - Structures that enable sustained success Contact us to discuss your digital strategy.</description>
+    </item>
+    <item>
+      <title>Finance Consulting</title>
+      <link>http://localhost:1313/services/finance-consulting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/services/finance-consulting/</guid>
+      <description>We provide financial assessments and strategic guidance to support planning, cost optimization, and investment decisions. Our work is independent and focused on clarity and control.&#xA;What We Do Financial analysis and reporting - Clear views of performance, margins, and cash flow. Budget and forecast design - Processes and models that support decision-making. Cost optimization - Identify savings without compromising quality or growth. Process improvement - Finance operations, close cycles, and controls.</description>
+    </item>
+    <item>
+      <title>Intelligent AI Solutions</title>
+      <link>http://localhost:1313/services/intelligent-ai-solutions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/services/intelligent-ai-solutions/</guid>
+      <description>We design and implement AI-driven solutions that enhance decision-making and automate operations. Our focus is on turning complex technology into practical business solutions that deliver measurable value.&#xA;What We Deliver AI strategy - Use cases and roadmaps aligned with business outcomes Automation - RPA and intelligent process automation Decision support - Analytics and AI that improve day-to-day decisions Integration - AI that works with your existing systems Contact us to explore AI opportunities for your organization.</description>
+    </item>
+    <item>
+      <title>Managed Services &amp; Operations</title>
+      <link>http://localhost:1313/services/managed-services-operations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/services/managed-services-operations/</guid>
+      <description>We provide ongoing support and optimization so your systems run smoothly and continue delivering value. From monitoring and maintenance to continuous improvement, we keep your technology aligned with your business.&#xA;What We Deliver Support &amp;amp; maintenance - Proactive monitoring and issue resolution Optimization - Tuning and enhancement of existing systems Upgrades &amp;amp; patches - Managed rollouts with minimal disruption Reporting &amp;amp; governance - Clear visibility and accountability Contact us to discuss managed services for your systems.</description>
+    </item>
+    <item>
+      <title>Operations Excellence</title>
+      <link>http://localhost:1313/services/operations-excellence/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/services/operations-excellence/</guid>
+      <description>We analyze operations, processes, and workflows to find inefficiencies and improvement opportunities. Our approach is systematic and outcome-focused-we aim for measurable gains, not activity for its own sake.&#xA;What We Do Process mapping and analysis - Current state, pain points, and improvement levers. Workflow design - Clear handoffs, roles, and exceptions. Efficiency and capacity assessment - Where time and resources are lost. Quality and performance management - Metrics, targets, and governance.</description>
+    </item>
+    <item>
+      <title>Resource Augmentation &amp; Talent Support</title>
+      <link>http://localhost:1313/services/resource-augmentation-talent-support/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/services/resource-augmentation-talent-support/</guid>
+      <description>We provide experienced consultants and solution architects who work alongside your team-without vendor bias. Our professionals bring deep expertise and integrate seamlessly with your organization to deliver results.&#xA;What We Deliver Consultants &amp;amp; architects - ERP, CRM, AI, and business process expertise Project-based or ongoing - Flexible engagement models Your goals, our expertise - Aligned with your objectives, not product sales Knowledge transfer - Your team grows while we deliver Contact us to discuss resource augmentation for your projects.</description>
+    </item>
+    <item>
+      <title>Sales &amp; Marketing</title>
+      <link>http://localhost:1313/services/sales-marketing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/services/sales-marketing/</guid>
+      <description>We conduct comprehensive assessments of your sales and marketing operations to identify opportunities for growth and optimization. Our approach is strategic, not tactical-we align systems, processes, and teams with your business objectives.&#xA;What We Do Sales process analysis and optimization - Map current state, identify bottlenecks, design improvements. Marketing strategy development - Align messaging, channels, and spend with business goals. CRM strategy and implementation - Vendor-neutral guidance on selection and rollout.</description>
+    </item>
+    <item>
+      <title>Technology Solutions</title>
+      <link>http://localhost:1313/services/technology-solutions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/services/technology-solutions/</guid>
+      <description>We help you select, design, and implement technology that fits your business-without pushing a particular vendor. Our expertise spans ERP, CRM, content management, RPA, AI, and custom solutions.&#xA;What We Do ERP strategy and implementation - Requirements, vendor evaluation, and implementation support. CRM and customer systems - Strategy, selection, and rollout aligned with sales and service. Content and document management - Workflow, governance, and platform selection. RPA and process automation - Identify and automate high-impact processes.</description>
     </item>
   </channel>
 </rss>

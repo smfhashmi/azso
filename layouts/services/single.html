@@ -1,0 +1,28 @@
+{{ define "main" }}
+<article>
+  {{ partial "page-hero.html" . }}
+  <section class="luxury-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="clarity-prose content">
+            {{ .Content }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="luxury-cta" data-reveal>
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-8">
+          <h2 class="luxury-cta-title">Ready to discuss this with your team?</h2>
+          <p class="luxury-cta-lead mb-4">We'll help you scope the right engagement.</p>
+          <a href="{{ `/contact/` | relURL }}" class="btn btn-primary luxury-btn me-2">Talk to an Expert</a>
+          <a href="{{ `/services/` | relURL }}" class="btn btn-outline-primary luxury-btn-outline">View all services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</article>
+{{ end }}

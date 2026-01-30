@@ -1,0 +1,14 @@
+{{ define "main" }}
+<div>
+  <header class="clarity-page-header">
+    <div class="container">
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.subtitle }}<p class="lead mb-0">{{ . }}</p>{{ end }}
+    </div>
+  </header>
+  <div class="container py-5">
+    {{ with .Content }}<div class="row mb-5"><div class="col-lg-8 mx-auto clarity-prose">{{ . }}</div></div>{{ end }}
+    {{ block "list-content" . }}{{ end }}
+  </div>
+</div>
+{{ end }}

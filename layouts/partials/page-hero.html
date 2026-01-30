@@ -1,0 +1,33 @@
+{{ $title := .Params.hero_title | default .Title }}
+{{ $lead := .Params.hero_lead | default .Params.subtitle | default .Params.description }}
+{{ $image := .Params.hero_image }}
+{{ $ctaText := .Params.hero_cta_text }}
+{{ $ctaUrl := .Params.hero_cta_url | default "/contact/" }}
+<section class="page-hero {{ if $image }}page-hero-bg{{ end }}" {{ with $image }}style="background-image: url('{{ . }}');"{{ end }} data-reveal>
+  {{ if $image }}<div class="page-hero-overlay"></div>{{ end }}
+  <div class="container {{ if $image }}position-relative{{ end }}">
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-9">
+        {{ with .Params.hero_label }}
+          <p class="page-hero-label mb-2"><a href="{{ $.Parent.RelPermalink }}">{{ . }}</a></p>
+        {{ else }}
+          {{ if eq .Section "services" }}
+            <p class="page-hero-label mb-2"><a href="{{ "/services/" | relURL }}">Services</a></p>
+          {{ end }}
+        {{ end }}
+        <h1 class="page-hero-title">{{ $title }}</h1>
+        {{ with $lead }}
+          <p class="page-hero-lead">{{ . }}</p>
+        {{ end }}
+        {{ with .Params.hero_subtext }}
+          <p class="page-hero-subtext">{{ . }}</p>
+        {{ end }}
+        {{ with $ctaText }}
+          <div class="mt-4">
+            <a href="{{ $ctaUrl | relURL }}" class="btn btn-primary btn-lg luxury-btn">{{ . }}</a>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
