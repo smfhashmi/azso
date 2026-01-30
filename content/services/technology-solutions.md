@@ -18,6 +18,21 @@ We help you select, design, and implement technology that fits your business-wit
 
 We work across Oracle, Microsoft, SAP, OpenText, Hyland, DocuWare, Kofax, ABBYY, and others-but we recommend what's right for you, not what we resell. We focus on requirements, architecture, and change so that technology delivers measurable outcomes.
 
+<div class="tech-partners-section" data-reveal>
+  <p class="tech-partners-overline">TECHNOLOGY PARTNERS</p>
+  <h2 class="tech-partners-title">We work with industry-leading platforms to deliver exceptional results</h2>
+  <div class="tech-partners-grid">
+    <span class="tech-partner-tag">Oracle</span>
+    <span class="tech-partner-tag">Microsoft</span>
+    <span class="tech-partner-tag">SAP</span>
+    <span class="tech-partner-tag">OpenText</span>
+    <span class="tech-partner-tag">Hyland</span>
+    <span class="tech-partner-tag">DocuWare</span>
+    <span class="tech-partner-tag">Kofax</span>
+    <span class="tech-partner-tag">ABBYY</span>
+  </div>
+</div>
+
 ## Outcomes
 
 - Technology decisions aligned with business strategy

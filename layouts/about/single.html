@@ -36,73 +36,91 @@
     </div>
   </section>
 
-  <!-- Our Mission: image left, text right -->
-  <section class="about-block-v2 about-reveal">
+  <!-- Our Mission: image left, text right (col-12 centered) -->
+  <section class="about-block-v2 about-block-v2-luxury about-reveal" data-reveal>
     <div class="container">
-      <div class="row align-items-center about-block-v2-tight">
-        <div class="col-lg-5 order-lg-1 about-block-v2-img-col">
-          <div class="about-block-v2-img-wrap about-hover-img">
-            <img src="{{ .Params.mission_image | default "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=500&fit=crop" }}" alt="Our mission" class="img-fluid rounded">
-          </div>
-        </div>
-        <div class="col-lg-6 order-lg-2 about-block-v2-content-col ms-lg-3">
-          <h2 class="about-block-v2-title">{{ .Params.mission_title | default "Our Mission" }}</h2>
-          {{ with .Params.mission_text }}
-            <p class="about-block-v2-text">{{ . }}</p>
-          {{ end }}
-          {{ with .Params.mission_bullets }}
-            <ul class="about-block-v2-list">
-              {{ range . }}<li>{{ . }}</li>{{ end }}
-            </ul>
-          {{ end }}
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Our Vision: text left, single image right -->
-  <section class="about-block-v2 about-block-v2-alt about-reveal">
-    <div class="container">
-      <div class="row align-items-center about-block-v2-tight">
-        <div class="col-lg-6 order-lg-1 about-block-v2-content-col me-lg-3">
-          <h2 class="about-block-v2-title">{{ .Params.vision_title | default "Our Vision" }}</h2>
-          {{ with .Params.vision_text }}
-            <p class="about-block-v2-text">{{ . }}</p>
-          {{ end }}
-          {{ with .Params.vision_bullets }}
-            <ul class="about-block-v2-list">
-              {{ range . }}<li>{{ . }}</li>{{ end }}
-            </ul>
-          {{ end }}
-        </div>
-        <div class="col-lg-5 order-lg-2 about-block-v2-img-col">
-          <div class="about-block-v2-img-wrap about-hover-img">
-            <img src="{{ .Params.vision_image | default "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop" }}" alt="Our vision" class="img-fluid rounded">
+      <div class="row justify-content-center">
+        <div class="col-lg-12">
+          <div class="row about-block-v2-tight">
+            <div class="col-lg-5 order-lg-1 about-block-v2-img-col about-reveal about-reveal-delay-1" data-reveal>
+              <div class="about-block-v2-img-wrap about-hover-img about-img-luxury">
+                <div class="about-img-overlay"></div>
+                <img src="{{ .Params.mission_image | default "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=500&fit=crop" }}" alt="Our mission" class="img-fluid">
+              </div>
+            </div>
+            <div class="col-lg-6 order-lg-2 about-block-v2-content-col ms-lg-3 about-content-card about-reveal about-reveal-delay-2" data-reveal>
+              <p class="about-block-v2-overline">What drives us</p>
+              <h2 class="about-block-v2-title">{{ .Params.mission_title | default "Our Mission" }}</h2>
+              {{ with .Params.mission_text }}
+                <p class="about-block-v2-text">{{ . }}</p>
+              {{ end }}
+              {{ with .Params.mission_bullets }}
+                <ul class="about-block-v2-list about-list-stagger">
+                  {{ range . }}<li><span class="about-bullet-icon"><i class="bi bi-check2"></i></span>{{ . }}</li>{{ end }}
+                </ul>
+              {{ end }}
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Our History: image left, text right -->
-  <section class="about-block-v2 about-reveal">
+  <!-- Our Vision: text left, single image right (col-12 centered) -->
+  <section class="about-block-v2 about-block-v2-alt about-block-v2-luxury about-reveal" data-reveal>
     <div class="container">
-      <div class="row align-items-center about-block-v2-tight">
-        <div class="col-lg-5 order-lg-1 about-block-v2-img-col">
-          <div class="about-block-v2-img-wrap about-hover-img">
-            <img src="{{ .Params.history_image | default "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=500&fit=crop" }}" alt="Our history" class="img-fluid rounded">
+      <div class="row justify-content-center">
+        <div class="col-lg-12">
+          <div class="row about-block-v2-tight">
+            <div class="col-lg-6 order-lg-1 about-block-v2-content-col me-lg-3 about-content-card about-reveal about-reveal-delay-1" data-reveal>
+              <p class="about-block-v2-overline">Looking ahead</p>
+              <h2 class="about-block-v2-title">{{ .Params.vision_title | default "Our Vision" }}</h2>
+              {{ with .Params.vision_text }}
+                <p class="about-block-v2-text">{{ . }}</p>
+              {{ end }}
+              {{ with .Params.vision_bullets }}
+                <ul class="about-block-v2-list about-list-stagger">
+                  {{ range . }}<li><span class="about-bullet-icon"><i class="bi bi-check2"></i></span>{{ . }}</li>{{ end }}
+                </ul>
+              {{ end }}
+            </div>
+            <div class="col-lg-5 order-lg-2 about-block-v2-img-col about-reveal about-reveal-delay-2" data-reveal>
+              <div class="about-block-v2-img-wrap about-hover-img about-img-luxury">
+                <div class="about-img-overlay"></div>
+                <img src="{{ .Params.vision_image | default "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop" }}" alt="Our vision" class="img-fluid">
+              </div>
+            </div>
           </div>
         </div>
-        <div class="col-lg-6 order-lg-2 about-block-v2-content-col ms-lg-3">
-          <h2 class="about-block-v2-title">{{ .Params.history_title | default "Our History" }}</h2>
-          {{ with .Params.history_text }}
-            <p class="about-block-v2-text">{{ . }}</p>
-          {{ end }}
-          {{ with .Params.history_bullets }}
-            <ul class="about-block-v2-list">
-              {{ range . }}<li>{{ . }}</li>{{ end }}
-            </ul>
-          {{ end }}
+      </div>
+    </div>
+  </section>
+
+  <!-- Our History: image left, text right (col-12 centered) -->
+  <section class="about-block-v2 about-block-v2-luxury about-reveal" data-reveal>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-12">
+          <div class="row about-block-v2-tight">
+            <div class="col-lg-5 order-lg-1 about-block-v2-img-col about-reveal about-reveal-delay-1" data-reveal>
+              <div class="about-block-v2-img-wrap about-hover-img about-img-luxury">
+                <div class="about-img-overlay"></div>
+                <img src="{{ .Params.history_image | default "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=500&fit=crop" }}" alt="Our history" class="img-fluid">
+              </div>
+            </div>
+            <div class="col-lg-6 order-lg-2 about-block-v2-content-col ms-lg-3 about-content-card about-reveal about-reveal-delay-2" data-reveal>
+              <p class="about-block-v2-overline">Our journey</p>
+              <h2 class="about-block-v2-title">{{ .Params.history_title | default "Our History" }}</h2>
+              {{ with .Params.history_text }}
+                <p class="about-block-v2-text">{{ . }}</p>
+              {{ end }}
+              {{ with .Params.history_bullets }}
+                <ul class="about-block-v2-list about-list-stagger">
+                  {{ range . }}<li><span class="about-bullet-icon"><i class="bi bi-check2"></i></span>{{ . }}</li>{{ end }}
+                </ul>
+              {{ end }}
+            </div>
+          </div>
         </div>
       </div>
     </div>

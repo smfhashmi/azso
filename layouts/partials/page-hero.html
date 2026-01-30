@@ -1,6 +1,6 @@
 {{ $title := .Params.hero_title | default .Title }}
 {{ $lead := .Params.hero_lead | default .Params.subtitle | default .Params.description }}
-{{ $image := .Params.hero_image }}
+{{ $image := .Params.hero_image | default .Params.image }}
 {{ $ctaText := .Params.hero_cta_text }}
 {{ $ctaUrl := .Params.hero_cta_url | default "/contact/" }}
 <section class="page-hero {{ if $image }}page-hero-bg{{ end }}" {{ with $image }}style="background-image: url('{{ . }}');"{{ end }} data-reveal>

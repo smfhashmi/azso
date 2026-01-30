@@ -18,7 +18,11 @@
   if (allReveal.length && 'IntersectionObserver' in window) {
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
-        if (entry.isIntersecting) entry.target.classList.add('revealed');
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          var list = entry.target.querySelector('.about-list-stagger');
+          if (list) list.classList.add('revealed');
+        }
       });
     }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
     allReveal.forEach(function (el) { observer.observe(el); });
