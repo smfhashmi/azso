@@ -9,9 +9,22 @@
     <div class="collapse navbar-collapse" id="azva-nav">
       <ul class="navbar-nav ms-auto align-items-lg-center gap-1">
         {{ range .Site.Menus.main }}
-          <li class="nav-item">
-            <a class="nav-link {{ if eq $.RelPermalink .URL }}active{{ end }}" href="{{ .URL | relURL }}">{{ .Name }}</a>
-          </li>
+          {{ if eq .Identifier "services" }}
+            <li class="nav-item dropdown dropdown-hover">
+              <a class="nav-link dropdown-toggle {{ if hasPrefix $.RelPermalink .URL }}active{{ end }}" href="{{ .URL | relURL }}" id="navbar-services-dropdown" role="button" aria-expanded="false">{{ .Name }}</a>
+              <ul class="dropdown-menu dropdown-menu-end luxury-dropdown luxury-dropdown-slide" aria-labelledby="navbar-services-dropdown">
+                {{ with $.Site.GetPage "/services" }}
+                  {{ range .Pages.ByTitle }}
+                    <li><a class="dropdown-item {{ if eq $.RelPermalink .RelPermalink }}active{{ end }}" href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                  {{ end }}
+                {{ end }}
+              </ul>
+            </li>
+          {{ else }}
+            <li class="nav-item">
+              <a class="nav-link {{ if eq $.RelPermalink .URL }}active{{ end }}" href="{{ .URL | relURL }}">{{ .Name }}</a>
+            </li>
+          {{ end }}
         {{ end }}
         <li class="nav-item ms-lg-3">
           <a class="btn btn-primary btn-sm" href="{{ `/contact/` | relURL }}">Get Started</a>

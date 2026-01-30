@@ -12,6 +12,43 @@
     }, { passive: true });
   }
 
+  // Hover dropdown for services on desktop
+  var dropdownHovers = document.querySelectorAll('.dropdown-hover');
+  if (dropdownHovers.length) {
+    dropdownHovers.forEach(function (dropdown) {
+      var toggle = dropdown.querySelector('.dropdown-toggle');
+      var menu = dropdown.querySelector('.dropdown-menu');
+      
+      if (toggle && menu) {
+        // Show dropdown on hover (desktop only)
+        dropdown.addEventListener('mouseenter', function () {
+          if (window.innerWidth >= 992) {
+            menu.classList.add('show');
+            toggle.setAttribute('aria-expanded', 'true');
+          }
+        });
+        
+        // Hide dropdown on mouse leave (desktop only)
+        dropdown.addEventListener('mouseleave', function () {
+          if (window.innerWidth >= 992) {
+            menu.classList.remove('show');
+            toggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+        
+        // Prevent Bootstrap dropdown toggle on desktop, allow link navigation
+        toggle.addEventListener('click', function (e) {
+          if (window.innerWidth >= 992) {
+            // Don't toggle dropdown, allow link to work
+            e.stopPropagation();
+            // Let the browser handle the link
+            return true;
+          }
+        });
+      }
+    });
+  }
+
   var revealEls = document.querySelectorAll('[data-reveal]');
   var aboutRevealEls = document.querySelectorAll('.about-reveal');
   var allReveal = [].slice.call(revealEls).concat([].slice.call(aboutRevealEls));
