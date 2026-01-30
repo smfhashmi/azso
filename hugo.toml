@@ -11,7 +11,7 @@ ignoreLogs = ['warning-goldmark-raw-html']
 
 [params]
   companyName = "AZVA Solutions"
-  logo = "/images/azva_Logo.png"
+  logo = "/images/azva_Logo1.png"
   tagline = "Strategic Partner for Business Growth & Digital Transformation"
   description = "Full-service consulting and solutions firm specializing in sales, marketing, technology, and finance. Your strategic partner for operational excellence and informed decision-making."
   location = "Dubai, UAE"

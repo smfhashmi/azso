@@ -762,7 +762,7 @@ a:hover { color: var(--luxury-gold); }
 .site-footer-main { padding-bottom: 2.5rem; }
 .site-footer-brand { margin-bottom: 1rem; }
 .site-footer-logo {
-  height: 52px;
+  height: 64px;
   width: auto;
   display: block;
   object-fit: contain;
