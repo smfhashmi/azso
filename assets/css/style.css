@@ -699,7 +699,7 @@ a:hover { color: var(--luxury-gold); }
 }
 .luxury-footer .footer-brand a { display: inline-block; }
 .luxury-footer .footer-brand a:hover { opacity: 0.9; }
-}
+
 
 .luxury-footer .footer-desc {
   font-size: 0.9375rem;
