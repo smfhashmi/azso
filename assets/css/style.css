@@ -559,6 +559,47 @@ a:hover { color: var(--luxury-gold); }
   font-size: 1.05rem;
 }
 
+/* Stats Section */
+.stats-section {
+  padding: 4rem 0;
+}
+.stat-card {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: var(--luxury-white);
+  border-radius: 12px;
+  box-shadow: var(--luxury-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  border: 2px solid transparent;
+  height: 100%;
+}
+.stat-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--luxury-shadow-strong);
+  border-color: var(--luxury-gold);
+}
+.stat-value {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: var(--luxury-charcoal);
+  line-height: 1.1;
+  margin-bottom: 0.75rem;
+  background: linear-gradient(135deg, var(--luxury-charcoal) 0%, var(--luxury-gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.stat-label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--luxury-text-muted);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
 /* Technology Partners Enhanced */
 .tech-partners-section {
   padding: 6rem 0;
@@ -879,6 +920,24 @@ a:hover { color: var(--luxury-gold); }
 }
 .page-hero-label a { color: var(--luxury-gold); text-decoration: none; transition: letter-spacing var(--luxury-transition-fast); }
 .page-hero-label a:hover { text-decoration: underline; letter-spacing: 0.14em; }
+
+/* Services Page Hero Enhancement */
+.services-page-hero {
+  padding: 6rem 0 5.5rem;
+  text-align: center;
+}
+.services-page-hero .page-hero-title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  margin-bottom: 1.5rem;
+  max-width: 100%;
+}
+.services-page-hero .page-hero-lead {
+  font-size: 1.2rem;
+  max-width: 42rem;
+  margin: 0 auto;
+  color: var(--luxury-text-muted);
+}
+
 /* Page hero with background image */
 .page-hero-bg {
   position: relative;

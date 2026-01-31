@@ -1,17 +1,18 @@
 {{ define "main" }}
 <div>
-  <header class="services-hero" {{ with .Params.hero_image }}style="background-image: url('{{ . }}');"{{ end }}>
-    <div class="services-hero-overlay"></div>
-    <div class="container position-relative">
-      <h1 class="services-hero-title">{{ .Params.hero_title | default .Title }}</h1>
-      {{ with .Params.hero_lead }}
-        <p class="services-hero-lead">{{ . }}</p>
-      {{ end }}
-      {{ with .Params.hero_subtext }}
-        <p class="services-hero-subtext">{{ . }}</p>
-      {{ end }}
+  <section class="page-hero services-page-hero" data-reveal>
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-10">
+          <p class="section-label mb-3 fade-in-up">Our Services</p>
+          <h1 class="page-hero-title fade-in-up" style="transition-delay: 0.1s;">{{ .Title }}</h1>
+          {{ with .Params.subtitle }}
+            <p class="page-hero-lead fade-in-up" style="transition-delay: 0.2s;">{{ . }}</p>
+          {{ end }}
+        </div>
+      </div>
     </div>
-  </header>
+  </section>
 
   <section class="luxury-section luxury-section-alt" data-reveal>
     <div class="container">
