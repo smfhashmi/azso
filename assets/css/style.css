@@ -565,39 +565,113 @@ a:hover { color: var(--luxury-gold); }
 }
 .stat-card {
   text-align: center;
-  padding: 2rem 1rem;
-  background: var(--luxury-white);
-  border-radius: 12px;
+  padding: 2.5rem 1.5rem;
+  border-radius: 16px;
   box-shadow: var(--luxury-shadow);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-  border: 2px solid transparent;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.stat-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--luxury-gold) 0%, var(--luxury-charcoal) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 .stat-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-8px);
   box-shadow: var(--luxury-shadow-strong);
-  border-color: var(--luxury-gold);
 }
-.stat-value {
-  display: block;
-  font-family: var(--font-display);
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
-  font-weight: 700;
-  color: var(--luxury-charcoal);
-  line-height: 1.1;
-  margin-bottom: 0.75rem;
+.stat-card:hover::before {
+  opacity: 1;
+}
+
+/* Theme-colored stat cards */
+.stat-card-1 {
+  background: linear-gradient(135deg, rgba(237, 82, 77, 0.08) 0%, rgba(237, 82, 77, 0.03) 100%);
+  border: 2px solid rgba(237, 82, 77, 0.15);
+}
+.stat-card-1:hover {
+  background: linear-gradient(135deg, rgba(237, 82, 77, 0.12) 0%, rgba(237, 82, 77, 0.05) 100%);
+  border-color: rgba(237, 82, 77, 0.3);
+}
+.stat-card-1 .stat-value {
+  background: linear-gradient(135deg, #ed524d 0%, #c43d38 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stat-card-2 {
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.08) 0%, rgba(26, 26, 26, 0.03) 100%);
+  border: 2px solid rgba(26, 26, 26, 0.15);
+}
+.stat-card-2:hover {
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.12) 0%, rgba(26, 26, 26, 0.05) 100%);
+  border-color: rgba(26, 26, 26, 0.3);
+}
+.stat-card-2 .stat-value {
+  background: linear-gradient(135deg, var(--luxury-charcoal) 0%, #1a1a1a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stat-card-3 {
+  background: linear-gradient(135deg, rgba(237, 82, 77, 0.1) 0%, rgba(237, 82, 77, 0.04) 100%);
+  border: 2px solid rgba(237, 82, 77, 0.2);
+}
+.stat-card-3:hover {
+  background: linear-gradient(135deg, rgba(237, 82, 77, 0.15) 0%, rgba(237, 82, 77, 0.06) 100%);
+  border-color: rgba(237, 82, 77, 0.35);
+}
+.stat-card-3 .stat-value {
+  background: linear-gradient(135deg, var(--luxury-gold) 0%, #ed524d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stat-card-4 {
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.1) 0%, rgba(26, 26, 26, 0.04) 100%);
+  border: 2px solid rgba(26, 26, 26, 0.2);
+}
+.stat-card-4:hover {
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.15) 0%, rgba(26, 26, 26, 0.06) 100%);
+  border-color: rgba(26, 26, 26, 0.35);
+}
+.stat-card-4 .stat-value {
   background: linear-gradient(135deg, var(--luxury-charcoal) 0%, var(--luxury-gold) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+.stat-value {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 0.75rem;
+  position: relative;
+  z-index: 1;
+}
 .stat-label {
   display: block;
   font-size: 0.95rem;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--luxury-text-muted);
   letter-spacing: 0.02em;
   text-transform: uppercase;
+  position: relative;
+  z-index: 1;
 }
 
 /* Technology Partners Enhanced */
@@ -936,6 +1010,38 @@ a:hover { color: var(--luxury-gold); }
   max-width: 42rem;
   margin: 0 auto;
   color: var(--luxury-text-muted);
+}
+
+/* Services Page Hero with Background Image */
+.services-page-hero-bg {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-bottom: none;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+}
+.services-page-hero-bg::after {
+  display: none;
+}
+.services-page-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(237, 82, 77, 0.85) 0%, rgba(237, 82, 77, 0.75) 50%, rgba(26, 26, 26, 0.88) 100%);
+  z-index: 1;
+}
+.services-page-hero-bg .container.position-relative {
+  z-index: 2;
+}
+.services-page-hero-bg .page-hero-title {
+  color: var(--luxury-white);
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+}
+.services-page-hero-bg .page-hero-lead {
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Page hero with background image */

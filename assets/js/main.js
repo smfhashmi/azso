@@ -83,37 +83,45 @@
     fadeInUpEls.forEach(function (el) { fadeObserver.observe(el); });
   }
 
-  // About page: stats count-up when in view
-  var aboutStats = document.getElementById('about-stats');
-  if (aboutStats && 'IntersectionObserver' in window) {
-    var statValues = aboutStats.querySelectorAll('.about-stat-v2-value[data-stat]');
-    var statsObserver = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (!entry.isIntersecting) return;
-        statsObserver.disconnect();
-        statValues.forEach(function (el) {
-          var raw = el.getAttribute('data-stat') || el.textContent;
-          var match = raw.match(/^(\d+)(.*)$/);
-          if (!match) return;
-          var end = parseInt(match[1], 10);
-          var suffix = match[2] || '';
-          var duration = 1500;
-          var start = 0;
-          var startTime = null;
-          function step(timestamp) {
-            if (!startTime) startTime = timestamp;
-            var progress = Math.min((timestamp - startTime) / duration, 1);
-            var easeOut = 1 - Math.pow(1 - progress, 2);
-            var current = Math.round(start + (end - start) * easeOut);
-            el.textContent = current + suffix;
-            if (progress < 1) requestAnimationFrame(step);
-          }
-          requestAnimationFrame(step);
+  // Stats count-up animation function
+  function initStatsCounter(containerId, selector) {
+    var statsContainer = document.getElementById(containerId);
+    if (statsContainer && 'IntersectionObserver' in window) {
+      var statValues = statsContainer.querySelectorAll(selector);
+      var statsObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          statsObserver.disconnect();
+          statValues.forEach(function (el) {
+            var raw = el.getAttribute('data-stat') || el.textContent;
+            var match = raw.match(/^(\d+)(.*)$/);
+            if (!match) return;
+            var end = parseInt(match[1], 10);
+            var suffix = match[2] || '';
+            var duration = 1500;
+            var start = 0;
+            var startTime = null;
+            function step(timestamp) {
+              if (!startTime) startTime = timestamp;
+              var progress = Math.min((timestamp - startTime) / duration, 1);
+              var easeOut = 1 - Math.pow(1 - progress, 2);
+              var current = Math.round(start + (end - start) * easeOut);
+              el.textContent = current + suffix;
+              if (progress < 1) requestAnimationFrame(step);
+            }
+            requestAnimationFrame(step);
+          });
         });
-      });
-    }, { threshold: 0.3 });
-    statsObserver.observe(aboutStats);
+      }, { threshold: 0.3 });
+      statsObserver.observe(statsContainer);
+    }
   }
+
+  // About page: stats count-up when in view
+  initStatsCounter('about-stats', '.about-stat-v2-value[data-stat]');
+  
+  // Home page: stats count-up when in view
+  initStatsCounter('home-stats', '.stat-value[data-stat]');
 
   // About page: video play button — scroll to Get in Touch CTA
   var aboutVideoPlay = document.getElementById('about-video-play');
