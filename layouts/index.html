@@ -1,107 +1,183 @@
 {{ define "main" }}
 
-<!-- Hero (content from content/_index.md) -->
-<section class="luxury-hero {{ with .Param "hero_image" }}luxury-hero-bg{{ end }}" {{ with .Param "hero_image" }}style="background-image: url('{{ . }}');"{{ end }} data-reveal>
-  {{ with .Param "hero_image" }}<div class="luxury-hero-overlay"></div>{{ end }}
-  <div class="container {{ with .Param "hero_image" }}position-relative{{ end }}">
+<!-- Hero Section with Bright Particles -->
+<section class="luxury-hero luxury-hero-particles-bright" data-reveal>
+  <div id="particles-js" class="particles-container"></div>
+  <div class="luxury-hero-overlay-bright"></div>
+  <div class="container position-relative">
     <div class="row justify-content-center text-center">
-      <div class="col-lg-9">
-        <h1 class="luxury-hero-title">{{ .Param "hero_title" | default "Intelligent Management & Consulting Services" }}</h1>
-        <p class="luxury-hero-lead">{{ .Param "hero_lead" | default .Site.Params.tagline }}</p>
-        {{ with .Param "hero_cta_text" }}
-        <div class="mt-5">
-          <a href="{{ $.Param "hero_cta_url" | default "/contact/" | relURL }}" class="btn btn-primary btn-lg luxury-btn">{{ . }}</a>
+      <div class="col-lg-10">
+        <div class="hero-content-wrapper">
+          <h1 class="luxury-hero-title hero-title-animate">{{ .Param "hero_title" | default "Your Strategic Partner in Business Growth & Digital Transformation" }}</h1>
+          <p class="luxury-hero-lead hero-lead-animate">{{ .Param "hero_lead" | default "We partner with organizations to deliver intelligent management and technology solutions combining strategy, systems, and support that drive real results." }}</p>
+          <div class="hero-cta-wrapper mt-5 d-flex justify-content-center gap-3 flex-wrap">
+            {{ with .Param "hero_cta_text" }}
+            <a href="{{ $.Param "hero_cta_url" | default "/contact/" | relURL }}" class="btn btn-primary btn-lg luxury-btn hero-btn-animate">{{ . }}</a>
+            {{ else }}
+            <a href="{{ `/contact/` | relURL }}" class="btn btn-primary btn-lg luxury-btn hero-btn-animate">Get Started</a>
+            {{ end }}
+            <a href="{{ `/services/` | relURL }}" class="btn btn-outline-light btn-lg hero-btn-animate" style="transition-delay: 0.2s;">Our Services</a>
+          </div>
         </div>
-        {{ else }}
-        <div class="mt-5">
-          <a href="{{ `/contact/` | relURL }}" class="btn btn-primary btn-lg luxury-btn">Get Started</a>
-        </div>
-        {{ end }}
       </div>
     </div>
   </div>
+  <div class="hero-scroll-indicator">
+    <div class="scroll-arrow"></div>
+  </div>
 </section>
 
-<!-- Services (6 cards) -->
-<section class="luxury-section luxury-section-alt" data-reveal>
+<!-- Services Section with Enhanced Animations -->
+<section class="luxury-section luxury-section-alt services-section" id="services" data-reveal>
   <div class="container">
     <div class="row mb-5">
       <div class="col-lg-10 mx-auto text-center">
-        <p class="section-label mb-2">Our Services</p>
-        <h2 class="luxury-section-title">Comprehensive solutions for your business</h2>
+        <p class="section-label mb-2 fade-in-up">Our Services</p>
+        <h2 class="luxury-section-title fade-in-up" style="transition-delay: 0.1s;">Comprehensive Solutions for Your Business</h2>
+        <p class="section-subtitle fade-in-up" style="transition-delay: 0.2s;">Transform your operations with our integrated suite of consulting, technology, and support services</p>
       </div>
     </div>
     <div class="row g-4">
       <div class="col-md-6 col-lg-4 reveal-delay-1" data-reveal>
-        {{ partial "service-card.html" (dict "title" "Business Consulting" "summary" "Optimize operations and drive sustainable growth. We help organizations work smarter, move faster, and scale confidently." "url" "/services/business-process-consulting/" "icon" "bi-briefcase") }}
+        <div class="service-card-enhanced">
+          {{ partial "service-card.html" (dict "title" "Business Consulting" "summary" "Optimize operations and drive sustainable growth. We help organizations work smarter, move faster, and scale confidently." "url" "/services/business-process-consulting/" "icon" "bi-briefcase") }}
+        </div>
       </div>
       <div class="col-md-6 col-lg-4 reveal-delay-2" data-reveal>
-        {{ partial "service-card.html" (dict "title" "Digital Advisory & Strategy" "summary" "Strategic guidance for intelligent business transformation. Vendor-neutral consulting that puts your business interests first." "url" "/services/digital-advisory-strategy/" "icon" "bi-lightbulb") }}
+        <div class="service-card-enhanced">
+          {{ partial "service-card.html" (dict "title" "Digital Advisory & Strategy" "summary" "Strategic guidance for intelligent business transformation. Vendor-neutral consulting that puts your business interests first." "url" "/services/digital-advisory-strategy/" "icon" "bi-lightbulb") }}
+        </div>
       </div>
       <div class="col-md-6 col-lg-4 reveal-delay-3" data-reveal>
-        {{ partial "service-card.html" (dict "title" "Intelligent AI Solutions" "summary" "AI-driven solutions that enhance decision-making and automate operations. Turn complex technology into practical business solutions." "url" "/services/intelligent-ai-solutions/" "icon" "bi-cpu") }}
+        <div class="service-card-enhanced">
+          {{ partial "service-card.html" (dict "title" "Intelligent AI Solutions" "summary" "AI-driven solutions that enhance decision-making and automate operations. Turn complex technology into practical business solutions." "url" "/services/intelligent-ai-solutions/" "icon" "bi-cpu") }}
+        </div>
       </div>
       <div class="col-md-6 col-lg-4 reveal-delay-4" data-reveal>
-        {{ partial "service-card.html" (dict "title" "Software Development" "summary" "Tailored software solutions built for your business. When off-the-shelf solutions don't fit, we build exactly what you need." "url" "/services/custom-software-development/" "icon" "bi-code-slash") }}
+        <div class="service-card-enhanced">
+          {{ partial "service-card.html" (dict "title" "Software Development" "summary" "Tailored software solutions built for your business. When off-the-shelf solutions don't fit, we build exactly what you need." "url" "/services/custom-software-development/" "icon" "bi-code-slash") }}
+        </div>
       </div>
       <div class="col-md-6 col-lg-4 reveal-delay-5" data-reveal>
-        {{ partial "service-card.html" (dict "title" "Managed Services & Operations" "summary" "Ongoing support and optimization for your systems. Ensure your systems run smoothly and continue delivering value." "url" "/services/managed-services-operations/" "icon" "bi-gear-wide-connected") }}
+        <div class="service-card-enhanced">
+          {{ partial "service-card.html" (dict "title" "Managed Services & Operations" "summary" "Ongoing support and optimization for your systems. Ensure your systems run smoothly and continue delivering value." "url" "/services/managed-services-operations/" "icon" "bi-gear-wide-connected") }}
+        </div>
       </div>
       <div class="col-md-6 col-lg-4 reveal-delay-6" data-reveal>
-        {{ partial "service-card.html" (dict "title" "Resource Augmentation & Talent Support" "summary" "Experienced professionals to strengthen your team. Work alongside your organization without vendor bias." "url" "/services/resource-augmentation-talent-support/" "icon" "bi-people") }}
+        <div class="service-card-enhanced">
+          {{ partial "service-card.html" (dict "title" "Resource Augmentation & Talent Support" "summary" "Experienced professionals to strengthen your team. Work alongside your organization without vendor bias." "url" "/services/resource-augmentation-talent-support/" "icon" "bi-people") }}
+        </div>
       </div>
     </div>
-    <div class="text-center mt-5">
-      <a href="{{ `/services/` | relURL }}" class="btn btn-outline-primary luxury-btn-outline">View all services</a>
+    <div class="text-center mt-5 fade-in-up" style="transition-delay: 0.7s;">
+      <a href="{{ `/services/` | relURL }}" class="btn btn-outline-primary luxury-btn-outline btn-lg">View All Services</a>
     </div>
   </div>
 </section>
 
-<!-- Why Azva (with image) -->
-<section class="luxury-section" data-reveal>
+<!-- Vision & Mission Section -->
+<section class="luxury-section vision-mission-section" data-reveal>
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-lg-10 mx-auto text-center">
+        <p class="section-label mb-2">Who We Are</p>
+        <h2 class="luxury-section-title">Our Vision & Mission</h2>
+      </div>
+    </div>
+    <div class="row g-5 align-items-center">
+      <!-- Vision -->
+      <div class="col-lg-6">
+        <div class="vision-mission-card vision-card">
+          <div class="card-icon-wrapper">
+            <i class="bi bi-eye"></i>
+          </div>
+          <h3 class="card-title">Our Vision</h3>
+          <p class="card-text">To be a trusted advisory and technology partner, enabling organizations to make confident decisions and achieve sustainable growth through intelligent, outcome-driven transformation.</p>
+          <ul class="card-bullets">
+            <li><i class="bi bi-check-circle"></i> Trusted advisory and technology partnership</li>
+            <li><i class="bi bi-check-circle"></i> Confident decision-making for organizations</li>
+            <li><i class="bi bi-check-circle"></i> Intelligent, outcome-driven transformation</li>
+            <li><i class="bi bi-check-circle"></i> Sustainable growth and measurable results</li>
+          </ul>
+        </div>
+      </div>
+      <!-- Mission -->
+      <div class="col-lg-6">
+        <div class="vision-mission-card mission-card">
+          <div class="card-icon-wrapper">
+            <i class="bi bi-bullseye"></i>
+          </div>
+          <h3 class="card-title">Our Mission</h3>
+          <p class="card-text">To partner with organizations throughout their transformation journey—from strategy and process change to technology implementation and successful go-live. We act as trusted advisors and hands-on program leaders, ensuring initiatives are delivered with discipline, accountability, and measurable outcomes.</p>
+          <ul class="card-bullets">
+            <li><i class="bi bi-check-circle"></i> Strategy and process transformation</li>
+            <li><i class="bi bi-check-circle"></i> Technology implementation and successful go-live</li>
+            <li><i class="bi bi-check-circle"></i> Trusted advisors and hands-on program leaders</li>
+            <li><i class="bi bi-check-circle"></i> Discipline, accountability, and measurable outcomes</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Azva Section - Enhanced -->
+<section class="luxury-section luxury-section-alt why-azva-section" data-reveal>
   <div class="container">
     <div class="row align-items-center g-5">
       <div class="col-lg-5 order-lg-2">
-        <div class="home-section-img-wrap rounded overflow-hidden shadow">
-          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=500&fit=crop" alt="Team collaboration" class="img-fluid w-100">
+        <div class="why-azva-image-wrapper">
+          <div class="image-frame">
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=500&fit=crop" alt="Team collaboration" class="img-fluid w-100">
+            <div class="image-overlay"></div>
+          </div>
         </div>
       </div>
       <div class="col-lg-7 order-lg-1">
+        <p class="section-label mb-2">Why Choose Us</p>
         <h2 class="luxury-section-title mb-4">Why Azva</h2>
         <p class="luxury-section-subtitle mb-4">At Azva, we support our clients in aligning technology strategy with business priorities. Our experienced team of domain experts brings deep, hands-on expertise across industries to assess current-state architecture, processes, and capabilities, and to recommend the right technology and operating models—without vendor bias.</p>
         <p class="luxury-section-subtitle mb-4">We take a practical, business-first approach to ensure solutions and processes are scalable, secure, and measurable, enabling our clients to drive operational efficiency, informed decision-making, and long-term enterprise value.</p>
-        <div class="row g-3 mt-4">
+        <div class="row g-4 mt-4">
           <div class="col-md-6">
-            <div class="d-flex align-items-start">
-              <span class="check-icon me-3"><i class="bi bi-check-lg"></i></span>
-              <div>
+            <div class="feature-box">
+              <div class="feature-icon">
+                <i class="bi bi-shield-check"></i>
+              </div>
+              <div class="feature-content">
                 <strong>Vendor-neutral consulting</strong>
                 <p class="mb-0 small text-muted">We represent your interests, not vendors</p>
               </div>
             </div>
           </div>
           <div class="col-md-6">
-            <div class="d-flex align-items-start">
-              <span class="check-icon me-3"><i class="bi bi-check-lg"></i></span>
-              <div>
+            <div class="feature-box">
+              <div class="feature-icon">
+                <i class="bi bi-graph-up-arrow"></i>
+              </div>
+              <div class="feature-content">
                 <strong>Business-first approach</strong>
                 <p class="mb-0 small text-muted">Practical solutions for real-world results</p>
               </div>
             </div>
           </div>
           <div class="col-md-6">
-            <div class="d-flex align-items-start">
-              <span class="check-icon me-3"><i class="bi bi-check-lg"></i></span>
-              <div>
+            <div class="feature-box">
+              <div class="feature-icon">
+                <i class="bi bi-lock"></i>
+              </div>
+              <div class="feature-content">
                 <strong>Scalable & secure</strong>
                 <p class="mb-0 small text-muted">Designed for growth and protection</p>
               </div>
             </div>
           </div>
           <div class="col-md-6">
-            <div class="d-flex align-items-start">
-              <span class="check-icon me-3"><i class="bi bi-check-lg"></i></span>
-              <div>
+            <div class="feature-box">
+              <div class="feature-icon">
+                <i class="bi bi-bar-chart"></i>
+              </div>
+              <div class="feature-content">
                 <strong>Measurable outcomes</strong>
                 <p class="mb-0 small text-muted">Focus on long-term enterprise value</p>
               </div>
@@ -113,103 +189,187 @@
   </div>
 </section>
 
-<!-- How We Work (with image) -->
-<!-- <section class="luxury-section luxury-section-alt" data-reveal>
-  <div class="container">
-    <div class="row align-items-center g-5">
-      <div class="col-lg-5">
-        <div class="home-section-img-wrap rounded overflow-hidden shadow">
-          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=500&fit=crop" alt="Strategy and planning" class="img-fluid w-100">
-        </div>
-      </div>
-      <div class="col-lg-7">
-        <p class="section-label mb-2">How We Work</p>
-        <h2 class="luxury-section-title mb-4">A Clear, Proven Approach</h2>
-        <ul class="luxury-how-list">
-          <li><span class="step-num">1</span><span><strong>Understand</strong> - We learn your business, challenges, and goals</span></li>
-          <li><span class="step-num">2</span><span><strong>Design</strong> - We architect the right solution, not just the latest tech</span></li>
-          <li><span class="step-num">3</span><span><strong>Implement</strong> - We work alongside your team to deliver real results</span></li>
-          <li><span class="step-num">4</span><span><strong>Optimize</strong> - We refine, scale, and continuously improve</span></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section> -->
-
-<!-- Industries We Serve (with image) -->
-<!-- <section class="luxury-section" data-reveal>
-  <div class="container">
-    <div class="row align-items-center g-5">
-      <div class="col-lg-5 order-lg-2">
-        <div class="home-section-img-wrap rounded overflow-hidden shadow">
-          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=500&fit=crop" alt="Industries we serve" class="img-fluid w-100">
-        </div>
-      </div>
-      <div class="col-lg-7 order-lg-1">
-        <p class="section-label mb-2">Industries We Serve</p>
-        <h2 class="luxury-section-title mb-4">We work with organizations across multiple industries</h2>
-        <ul class="luxury-industries-list">
-          <li><strong>FMCG</strong> - Fast-moving consumer goods</li>
-          <li><strong>Healthcare</strong> - Healthcare providers and systems</li>
-          <li><strong>Manufacturing & Distribution</strong> - Production and supply chain</li>
-          <li><strong>Retail & E-commerce</strong> - Customer-facing operations</li>
-          <li><strong>Financial & Business Services</strong> - Financial institutions and services</li>
-          <li><strong>Commodity Trading</strong> - Trading and commodity management</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section> -->
-
-<!-- Technology Partners -->
-<section class="luxury-section luxury-section-alt">
+<!-- Technology Partners - Enhanced -->
+<section class="luxury-section tech-partners-section" data-reveal>
   <div class="container">
     <div class="row mb-5">
       <div class="col-lg-8 mx-auto text-center">
         <p class="section-label mb-2">Technology Partners</p>
-        <h2 class="luxury-section-title">We work with industry-leading platforms to deliver exceptional results</h2>
+        <h2 class="luxury-section-title">We Work with Industry-Leading Platforms</h2>
+        <p class="section-subtitle">Delivering exceptional results through strategic partnerships with world-class technology providers</p>
       </div>
     </div>
-    <div class="tech-partners-grid">
-      <div class="tech-partner-logo">
-        <img src="/images/partners/oracle.png" alt="Oracle">
+    <div class="tech-partners-grid-enhanced">
+      <div class="tech-partner-logo-enhanced" data-reveal>
+        <div class="partner-logo-wrapper">
+          <img src="/images/partners/oracle.png" alt="Oracle" class="partner-logo">
+        </div>
       </div>
-      <div class="tech-partner-logo">
-        <img src="/images/partners/microsoft.png" alt="Microsoft">
+      <div class="tech-partner-logo-enhanced" data-reveal>
+        <div class="partner-logo-wrapper">
+          <img src="/images/partners/microsoft.png" alt="Microsoft" class="partner-logo">
+        </div>
       </div>
-      <div class="tech-partner-logo">
-        <img src="/images/partners/sap.png" alt="SAP">
+      <div class="tech-partner-logo-enhanced" data-reveal>
+        <div class="partner-logo-wrapper">
+          <img src="/images/partners/sap.png" alt="SAP" class="partner-logo">
+        </div>
       </div>
-      <div class="tech-partner-logo">
-        <img src="/images/partners/opentext.svg" alt="OpenText">
+      <div class="tech-partner-logo-enhanced" data-reveal>
+        <div class="partner-logo-wrapper">
+          <img src="/images/partners/opentext.svg" alt="OpenText" class="partner-logo">
+        </div>
       </div>
-      <div class="tech-partner-logo">
-        <img src="/images/partners/hyland.svg" alt="Hyland">
+      <div class="tech-partner-logo-enhanced" data-reveal>
+        <div class="partner-logo-wrapper">
+          <img src="/images/partners/hyland.svg" alt="Hyland" class="partner-logo">
+        </div>
       </div>
-      <div class="tech-partner-logo">
-        <img src="/images/partners/docuware.svg" alt="DocuWare">
+      <div class="tech-partner-logo-enhanced" data-reveal>
+        <div class="partner-logo-wrapper">
+          <img src="/images/partners/docuware.svg" alt="DocuWare" class="partner-logo">
+        </div>
       </div>
-      <div class="tech-partner-logo">
-        <img src="/images/partners/kofax.svg" alt="Kofax">
+      <div class="tech-partner-logo-enhanced" data-reveal>
+        <div class="partner-logo-wrapper">
+          <img src="/images/partners/kofax.svg" alt="Kofax" class="partner-logo">
+        </div>
       </div>
-      <div class="tech-partner-logo">
-        <img src="/images/partners/abbyy.svg" alt="ABBYY">
+      <div class="tech-partner-logo-enhanced" data-reveal>
+        <div class="partner-logo-wrapper">
+          <img src="/images/partners/abbyy.svg" alt="ABBYY" class="partner-logo">
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
-<section class="luxury-cta" data-reveal>
-  <div class="container">
+<!-- Enhanced CTA Section -->
+<section class="luxury-cta luxury-cta-enhanced" data-reveal>
+  <div class="cta-background-pattern"></div>
+  <div class="container position-relative">
     <div class="row justify-content-center text-center">
       <div class="col-lg-8">
-        <h2 class="luxury-cta-title">Ready to Transform Your Business?</h2>
-        <p class="luxury-cta-lead">Let's discuss how we can help you design, implement, and optimize intelligent management systems that drive sustainable growth.</p>
-        <a href="{{ `/contact/` | relURL }}" class="btn btn-primary btn-lg luxury-btn">Get Started</a>
+        <div class="cta-content-wrapper">
+          <h2 class="luxury-cta-title">Ready to Transform Your Business?</h2>
+          <p class="luxury-cta-lead">Let's discuss how we can help you design, implement, and optimize intelligent management systems that drive sustainable growth.</p>
+          <div class="cta-buttons mt-4">
+            <a href="{{ `/contact/` | relURL }}" class="btn btn-primary btn-lg luxury-btn me-3">Get Started</a>
+            <a href="{{ `/services/` | relURL }}" class="btn btn-outline-light btn-lg">Explore Services</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
+<script>
+  // Initialize particles.js with bright, corporate styling
+  function initParticles() {
+    if (typeof particlesJS !== 'undefined') {
+      particlesJS('particles-js', {
+        "particles": {
+          "number": {
+            "value": 120,
+            "density": {
+              "enable": true,
+              "value_area": 1000
+            }
+          },
+          "color": {
+            "value": "#ffffff"
+          },
+          "shape": {
+            "type": "circle",
+            "stroke": {
+              "width": 0,
+              "color": "#000000"
+            }
+          },
+          "opacity": {
+            "value": 0.6,
+            "random": true,
+            "anim": {
+              "enable": true,
+              "speed": 1.5,
+              "opacity_min": 0.3,
+              "sync": false
+            }
+          },
+          "size": {
+            "value": 4,
+            "random": true,
+            "anim": {
+              "enable": true,
+              "speed": 3,
+              "size_min": 2,
+              "sync": false
+            }
+          },
+          "line_linked": {
+            "enable": true,
+            "distance": 180,
+            "color": "#ffffff",
+            "opacity": 0.4,
+            "width": 1.5
+          },
+          "move": {
+            "enable": true,
+            "speed": 2,
+            "direction": "none",
+            "random": true,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false,
+            "attract": {
+              "enable": false,
+              "rotateX": 600,
+              "rotateY": 1200
+            }
+          }
+        },
+        "interactivity": {
+          "detect_on": "canvas",
+          "events": {
+            "onhover": {
+              "enable": true,
+              "mode": "grab"
+            },
+            "onclick": {
+              "enable": true,
+              "mode": "push"
+            },
+            "resize": true
+          },
+          "modes": {
+            "grab": {
+              "distance": 180,
+              "line_linked": {
+                "opacity": 0.6
+              }
+            },
+            "push": {
+              "particles_nb": 6
+            }
+          }
+        },
+        "retina_detect": true
+      });
+    } else {
+      setTimeout(initParticles, 100);
+    }
+  }
+  
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initParticles);
+  } else {
+    initParticles();
+  }
+
+  // Smooth scroll for scroll indicator
+  document.querySelector('.hero-scroll-indicator')?.addEventListener('click', function() {
+    document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
+  });
+</script>
 
 {{ end }}

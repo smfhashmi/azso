@@ -319,6 +319,368 @@ a:hover { color: var(--luxury-gold); }
 .luxury-hero-bg .luxury-hero-title { color: var(--luxury-white); text-shadow: 0 2px 12px rgba(0, 0, 0, 0.2); }
 .luxury-hero-bg .luxury-hero-lead { color: rgba(255, 255, 255, 0.92); }
 
+/* Home hero with particles.js - DARK BACKGROUND WITH BRIGHT PARTICLES */
+.luxury-hero-particles-bright {
+  position: relative;
+  border-bottom: none;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  padding: 8rem 0;
+}
+.luxury-hero-particles-bright::after { display: none; }
+.particles-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.luxury-hero-overlay-bright {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(26, 26, 46, 0.7) 0%, rgba(22, 33, 62, 0.6) 50%, rgba(15, 52, 96, 0.75) 100%);
+  z-index: 1;
+}
+.luxury-hero-particles-bright .container.position-relative { z-index: 2; }
+.luxury-hero-particles-bright .luxury-hero-title { 
+  color: var(--luxury-white); 
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  margin-bottom: 1.5rem;
+}
+.luxury-hero-particles-bright .luxury-hero-lead { 
+  color: rgba(255, 255, 255, 0.95); 
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+  font-size: 1.3rem;
+  max-width: 42rem;
+}
+
+/* Hero Animations */
+.hero-content-wrapper {
+  animation: fadeInUp 1s ease-out;
+}
+.hero-title-animate {
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+.hero-lead-animate {
+  animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+.hero-btn-animate {
+  animation: fadeInUp 0.8s ease-out 0.6s both;
+  display: inline-block;
+}
+.hero-cta-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Hero Scroll Indicator */
+.hero-scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  cursor: pointer;
+  animation: bounce 2s infinite;
+}
+.scroll-arrow {
+  width: 30px;
+  height: 30px;
+  border-right: 3px solid var(--luxury-white);
+  border-bottom: 3px solid var(--luxury-white);
+  transform: rotate(45deg);
+  opacity: 0.8;
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+  40% { transform: translateX(-50%) translateY(-10px); }
+  60% { transform: translateX(-50%) translateY(-5px); }
+}
+
+/* Section Subtitle */
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--luxury-text-muted);
+  max-width: 36rem;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Enhanced Service Cards */
+.service-card-enhanced {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+.service-card-enhanced:hover {
+  transform: translateY(-8px);
+}
+.service-card-enhanced .clarity-service-card {
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+/* Vision & Mission Section */
+.vision-mission-section {
+  padding: 6rem 0;
+  background: linear-gradient(180deg, var(--luxury-white) 0%, var(--luxury-cream) 100%);
+}
+.vision-mission-card {
+  background: var(--luxury-white);
+  border-radius: 12px;
+  padding: 3rem;
+  box-shadow: var(--luxury-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  border: 1px solid var(--luxury-border);
+}
+.vision-mission-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--luxury-shadow-hover);
+}
+.vision-card .card-icon-wrapper {
+  background: linear-gradient(135deg, rgba(237, 82, 77, 0.1) 0%, rgba(237, 82, 77, 0.05) 100%);
+  color: var(--luxury-charcoal);
+}
+.mission-card .card-icon-wrapper {
+  background: linear-gradient(135deg, rgba(237, 82, 77, 0.1) 0%, rgba(237, 82, 77, 0.05) 100%);
+  color: var(--luxury-charcoal);
+}
+.card-icon-wrapper {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+.vision-mission-card .card-title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--luxury-charcoal);
+  margin-bottom: 1.25rem;
+  font-weight: 700;
+}
+.vision-mission-card .card-text {
+  color: var(--luxury-text-muted);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+}
+.card-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.card-bullets li {
+  padding: 0.75rem 0;
+  color: var(--luxury-text);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+}
+.card-bullets li i {
+  color: var(--luxury-charcoal);
+  font-size: 1.2rem;
+  margin-top: 0.1rem;
+  flex-shrink: 0;
+}
+
+/* Why Azva Enhanced */
+.why-azva-section {
+  padding: 6rem 0;
+}
+.why-azva-image-wrapper {
+  position: relative;
+}
+.image-frame {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--luxury-shadow-strong);
+  transition: transform 0.3s ease;
+}
+.image-frame:hover {
+  transform: scale(1.02);
+}
+.image-frame img {
+  transition: transform 0.5s ease;
+}
+.image-frame:hover img {
+  transform: scale(1.1);
+}
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(237, 82, 77, 0.1) 0%, transparent 100%);
+  pointer-events: none;
+}
+.feature-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: var(--luxury-white);
+  border-radius: 8px;
+  box-shadow: var(--luxury-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+.feature-box:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--luxury-shadow-hover);
+}
+.feature-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(237, 82, 77, 0.1) 0%, rgba(237, 82, 77, 0.05) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--luxury-charcoal);
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+.feature-content strong {
+  display: block;
+  color: var(--luxury-charcoal);
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+
+/* Technology Partners Enhanced */
+.tech-partners-section {
+  padding: 6rem 0;
+  background: var(--luxury-cream);
+}
+.tech-partners-grid-enhanced {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.tech-partner-logo-enhanced {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.tech-partner-logo-enhanced[data-reveal].revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+.partner-logo-wrapper {
+  background: var(--luxury-white);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: var(--luxury-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--luxury-border);
+}
+.partner-logo-wrapper:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: var(--luxury-shadow-hover);
+}
+.partner-logo {
+  max-width: 100%;
+  max-height: 60px;
+  object-fit: contain;
+  filter: grayscale(100%) opacity(0.6);
+  transition: filter 0.3s ease;
+}
+.partner-logo-wrapper:hover .partner-logo {
+  filter: grayscale(0%) opacity(1);
+}
+
+/* Enhanced CTA */
+.luxury-cta-enhanced {
+  position: relative;
+  padding: 6rem 0;
+  background: linear-gradient(135deg, var(--luxury-charcoal) 0%, #c43d38 50%, var(--luxury-charcoal) 100%);
+  overflow: hidden;
+}
+.cta-background-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.05;
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.3) 1px, transparent 1px),
+    radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.3) 1px, transparent 1px);
+  background-size: 50px 50px, 60px 60px;
+  background-position: 0 0, 25px 25px;
+}
+.cta-content-wrapper {
+  position: relative;
+  z-index: 1;
+}
+.luxury-cta-enhanced .luxury-cta-title {
+  color: var(--luxury-white);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+.luxury-cta-enhanced .luxury-cta-lead {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.2rem;
+  max-width: 36rem;
+  margin: 0 auto 2rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.cta-buttons .btn {
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.cta-buttons .btn-outline-light {
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  color: var(--luxury-white);
+}
+.cta-buttons .btn-outline-light:hover {
+  background: var(--luxury-white);
+  color: var(--luxury-charcoal);
+  border-color: var(--luxury-white);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Fade In Up Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-in-up.revealed,
+[data-reveal].revealed .fade-in-up {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* ——— Page hero (inner pages: Contact, Services single, etc.) ——— */
 .page-hero {
   padding: 5rem 0 4.5rem;

@@ -51,6 +51,7 @@
 
   var revealEls = document.querySelectorAll('[data-reveal]');
   var aboutRevealEls = document.querySelectorAll('.about-reveal');
+  var fadeInUpEls = document.querySelectorAll('.fade-in-up');
   var allReveal = [].slice.call(revealEls).concat([].slice.call(aboutRevealEls));
   if (allReveal.length && 'IntersectionObserver' in window) {
     var observer = new IntersectionObserver(function (entries) {
@@ -59,10 +60,27 @@
           entry.target.classList.add('revealed');
           var list = entry.target.querySelector('.about-list-stagger');
           if (list) list.classList.add('revealed');
+          // Also reveal fade-in-up elements within this revealed element
+          var fadeInUps = entry.target.querySelectorAll('.fade-in-up');
+          fadeInUps.forEach(function (el) {
+            el.classList.add('revealed');
+          });
         }
       });
     }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
     allReveal.forEach(function (el) { observer.observe(el); });
+  }
+  
+  // Also observe fade-in-up elements directly
+  if (fadeInUpEls.length && 'IntersectionObserver' in window) {
+    var fadeObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -20px 0px' });
+    fadeInUpEls.forEach(function (el) { fadeObserver.observe(el); });
   }
 
   // About page: stats count-up when in view
