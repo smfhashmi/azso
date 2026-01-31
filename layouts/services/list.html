@@ -29,24 +29,23 @@
         </div>
       </div>
       <div class="row g-4">
-        <div class="col-md-6 col-lg-4">
-          {{ partial "service-card.html" (dict "title" "Digital Advisory & Strategy" "summary" "Strategic guidance for intelligent business transformation. Vendor-neutral consulting that puts your business interests first." "url" "/services/digital-advisory-strategy/" "icon" "bi-lightbulb") }}
-        </div>
-        <div class="col-md-6 col-lg-4">
-          {{ partial "service-card.html" (dict "title" "Business Consulting" "summary" "Optimize operations and drive sustainable growth. We help organizations work smarter, move faster, and scale confidently." "url" "/services/business-process-consulting/" "icon" "bi-briefcase") }}
-        </div>
-        <div class="col-md-6 col-lg-4">
-          {{ partial "service-card.html" (dict "title" "Intelligent AI Solutions" "summary" "AI-driven solutions that enhance decision-making and automate operations. Turn complex technology into practical business solutions." "url" "/services/intelligent-ai-solutions/" "icon" "bi-cpu") }}
-        </div>
-        <div class="col-md-6 col-lg-4">
-          {{ partial "service-card.html" (dict "title" "Custom Software Development" "summary" "Tailored software solutions built for your business. When off-the-shelf solutions don't fit, we build exactly what you need." "url" "/services/custom-software-development/" "icon" "bi-code-slash") }}
-        </div>
-        <div class="col-md-6 col-lg-4">
-          {{ partial "service-card.html" (dict "title" "Managed Services & Operations" "summary" "Ongoing support and optimization for your systems. Ensure your systems run smoothly and continue delivering value." "url" "/services/managed-services-operations/" "icon" "bi-gear-wide-connected") }}
-        </div>
-        <div class="col-md-6 col-lg-4">
-          {{ partial "service-card.html" (dict "title" "Resource Augmentation & Talent Support" "summary" "Experienced professionals to strengthen your team. Work alongside your organization without vendor bias." "url" "/services/resource-augmentation-talent-support/" "icon" "bi-people") }}
-        </div>
+        {{ range sort .Pages "Params.weight" "asc" }}
+          {{ $icon := "bi-briefcase" }}
+          {{ $slug := .File.BaseFileName }}
+          {{ if eq $slug "digital-advisory-strategy" }}{{ $icon = "bi-lightbulb" }}{{ end }}
+          {{ if eq $slug "business-process-consulting" }}{{ $icon = "bi-briefcase" }}{{ end }}
+          {{ if eq $slug "intelligent-ai-solutions" }}{{ $icon = "bi-cpu" }}{{ end }}
+          {{ if eq $slug "custom-software-development" }}{{ $icon = "bi-code-slash" }}{{ end }}
+          {{ if eq $slug "managed-services-operations" }}{{ $icon = "bi-gear-wide-connected" }}{{ end }}
+          {{ if eq $slug "resource-augmentation-talent-support" }}{{ $icon = "bi-people" }}{{ end }}
+          {{ if eq $slug "technology-solutions" }}{{ $icon = "bi-laptop" }}{{ end }}
+          {{ if eq $slug "finance-consulting" }}{{ $icon = "bi-calculator" }}{{ end }}
+          {{ if eq $slug "operations-excellence" }}{{ $icon = "bi-graph-up-arrow" }}{{ end }}
+          {{ if eq $slug "sales-marketing" }}{{ $icon = "bi-megaphone" }}{{ end }}
+          <div class="col-md-6 col-lg-4">
+            {{ partial "service-card.html" (dict "title" .Title "summary" (default .Params.subtitle .Params.description) "url" .RelPermalink "icon" $icon) }}
+          </div>
+        {{ end }}
       </div>
     </div>
   </section>

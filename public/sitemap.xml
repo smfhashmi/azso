@@ -14,24 +14,18 @@
   </url><url>
     <loc>http://localhost:1313/services/resource-augmentation-talent-support/</loc>
   </url><url>
+    <loc>http://localhost:1313/services/sales-marketing/</loc>
+  </url><url>
     <loc>http://localhost:1313/about/</loc>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
   </url><url>
     <loc>http://localhost:1313/contact/</loc>
   </url><url>
-    <loc>http://localhost:1313/services/finance-consulting/</loc>
-  </url><url>
     <loc>http://localhost:1313/</loc>
-  </url><url>
-    <loc>http://localhost:1313/services/operations-excellence/</loc>
   </url><url>
     <loc>http://localhost:1313/services/</loc>
   </url><url>
-    <loc>http://localhost:1313/services/sales-marketing/</loc>
-  </url><url>
     <loc>http://localhost:1313/tags/</loc>
-  </url><url>
-    <loc>http://localhost:1313/services/technology-solutions/</loc>
   </url>
 </urlset>

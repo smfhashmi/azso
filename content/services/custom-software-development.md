@@ -1,5 +1,5 @@
 ---
-title: "Custom Software Development"
+title: "Software Development"
 subtitle: "Tailored software solutions built for your business"
 image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f1?w=1200&h=600&fit=crop"
 weight: 4

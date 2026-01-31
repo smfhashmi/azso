@@ -1,5 +1,5 @@
 ---
-title: "Sales & Marketing"
+title: "360° Digital Marketing"
 subtitle: "Strategic assessments and optimization of sales and marketing operations"
 description: "Strategic assessments and optimization of sales and marketing operations to drive growth."
 image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200&h=600&fit=crop"

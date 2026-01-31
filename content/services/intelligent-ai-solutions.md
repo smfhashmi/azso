@@ -83,7 +83,7 @@ We seamlessly integrate AI capabilities into your existing ERP, CRM, and busines
 ## Use Cases
 
 - **Customer Service** - AI-powered chatbots and support automation
-- **Sales & Marketing** - Lead scoring, customer segmentation, and campaign optimization
+- **360° Digital Marketing** - Lead scoring, customer segmentation, and campaign optimization
 - **Operations** - Predictive maintenance, inventory optimization, and supply chain forecasting
 - **Finance** - Fraud detection, risk assessment, and financial forecasting
 - **HR** - Talent acquisition, performance prediction, and employee insights
