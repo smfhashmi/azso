@@ -1,6 +1,6 @@
 baseURL = 'https://azvasolutions.com/'
 languageCode = 'en-us'
-title = 'AZVA Solutions - Smarter Systems. Better Decisions. Real Results.'
+title = 'AZVA Solutions - Your Strategic Partner in Business Growth & Digital Transformation'
 publishDir = 'public'
 ignoreLogs = ['warning-goldmark-raw-html']
 
@@ -14,9 +14,9 @@ ignoreLogs = ['warning-goldmark-raw-html']
   logo = "/images/azva_Logo1.png"
   tagline = "Strategic Partner for Business Growth & Digital Transformation"
   description = "Full-service consulting and solutions firm specializing in sales, marketing, technology, and finance. Your strategic partner for operational excellence and informed decision-making."
-  location = "Dubai, UAE"
+  location = "Technohub 1, Dtec, Dubai Silicon Oasis, Dubai, UAE"
   email = "info@azvasolutions.com"
-  phone = "+971 XX XXX XXXX"
+  phone = "+971 58 528 7862"
 
 [menu]
   [[menu.main]]
