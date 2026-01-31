@@ -1,7 +1,7 @@
 {{ $title := .title | default "Let's Talk Strategy." }}
 {{ $subtitle := .subtitle }}
 {{ $primary := .primary | default "Talk to an Expert" }}
-{{ $primaryUrl := .primaryUrl | default "/contact/" }}
+{{ $primaryUrl := .primaryUrl | default "https://cal.com/azvasolutions/30min" }}
 {{ $secondary := .secondary }}
 <section class="py-5" style="background: var(--clarity-dark-card); border-top: 1px solid var(--clarity-border);">
   <div class="container py-5">
@@ -10,7 +10,7 @@
         <h2 class="section-title">{{ $title }}</h2>
         {{ with $subtitle }}<p class="text-white-50 mb-4">{{ . }}</p>{{ end }}
         <div class="d-flex flex-wrap justify-content-center gap-3">
-          <a href="{{ $primaryUrl | relURL }}" class="btn btn-primary">{{ $primary }}</a>
+          <a href="{{ if hasPrefix $primaryUrl "http" }}{{ $primaryUrl }}{{ else }}{{ $primaryUrl | relURL }}{{ end }}" {{ if hasPrefix $primaryUrl "http" }}target="_blank" rel="noopener noreferrer"{{ end }} class="btn btn-primary">{{ $primary }}</a>
           {{ with $secondary }}
             <a href="{{ .url | relURL }}" class="btn btn-outline-primary">{{ .label }}</a>
           {{ end }}

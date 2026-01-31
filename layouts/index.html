@@ -12,9 +12,9 @@
           <p class="luxury-hero-lead hero-lead-animate">{{ .Param "hero_lead" | default "We partner with organizations to deliver intelligent management and technology solutions combining strategy, systems, and support that drive real results." }}</p>
           <div class="hero-cta-wrapper mt-5 d-flex justify-content-center gap-3 flex-wrap">
             {{ with .Param "hero_cta_text" }}
-            <a href="{{ $.Param "hero_cta_url" | default "/contact/" | relURL }}" class="btn btn-primary btn-lg luxury-btn hero-btn-animate">{{ . }}</a>
+            <a href="https://cal.com/azvasolutions/30min" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg luxury-btn hero-btn-animate">{{ . }}</a>
             {{ else }}
-            <a href="{{ `/contact/` | relURL }}" class="btn btn-primary btn-lg luxury-btn hero-btn-animate">Get Started</a>
+            <a href="https://cal.com/azvasolutions/30min" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg luxury-btn hero-btn-animate">Get Started</a>
             {{ end }}
             <a href="{{ `/services/` | relURL }}" class="btn btn-outline-light btn-lg hero-btn-animate" style="transition-delay: 0.2s;">Our Services</a>
           </div>
@@ -299,8 +299,9 @@
         <div class="cta-content-wrapper">
           <h2 class="luxury-cta-title">Ready to Transform Your Business?</h2>
           <p class="luxury-cta-lead">Let's discuss how we can help you design, implement, and optimize intelligent management systems that drive sustainable growth.</p>
+          <p class="luxury-cta-subtitle mt-2 mb-3" style="font-size: 0.95rem; opacity: 0.9;">Schedule a free 30-minute consultation to explore how we can help your business grow.</p>
           <div class="cta-buttons mt-4">
-            <a href="{{ `/contact/` | relURL }}" class="btn btn-primary btn-lg luxury-btn me-3">Get Started</a>
+            <a href="https://cal.com/azvasolutions/30min" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg luxury-btn me-3">Get Started</a>
             <a href="{{ `/services/` | relURL }}" class="btn btn-outline-light btn-lg">Explore Services</a>
           </div>
         </div>
