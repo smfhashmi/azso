@@ -2,7 +2,7 @@
 title: "Business Consulting"
 subtitle: "Optimize operations and drive sustainable growth"
 image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop"
-weight: 2
+weight: 1
 ---
 
 ## Transform Your Business Operations

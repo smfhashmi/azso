@@ -2,7 +2,7 @@
 title: "Digital Advisory & Strategy"
 subtitle: "Strategic guidance for intelligent business transformation"
 image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=600&fit=crop"
-weight: 1
+weight: 2
 ---
 
 ## Strategic Digital Transformation Partner
