@@ -1,6 +1,8 @@
 ---
 title: "Sales & Marketing"
+subtitle: "Strategic assessments and optimization of sales and marketing operations"
 description: "Strategic assessments and optimization of sales and marketing operations to drive growth."
+image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200&h=600&fit=crop"
 ---
 
 We conduct comprehensive assessments of your sales and marketing operations to identify opportunities for growth and optimization. Our approach is strategic, not tactical-we align systems, processes, and teams with your business objectives.

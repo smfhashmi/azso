@@ -1,8 +1,8 @@
 /* AZVA Solutions — Luxury UI (refined, premium, intelligent management) */
 
 :root {
-  --luxury-charcoal: #0d6efd;
-  --luxury-charcoal-soft: #2d6afe;
+  --luxury-charcoal: #ed524d;
+  --luxury-charcoal-soft: #f06b66;
   --luxury-gold: #ed524d;
   --luxury-gold-soft: #f06b66;
   --luxury-cream: #faf9f7;
@@ -22,9 +22,12 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
 body {
+  overflow-x: hidden;
   font-family: var(--font-sans);
   font-size: 1rem;
   line-height: 1.65;
@@ -32,6 +35,12 @@ body {
   background: var(--luxury-white);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Responsive images and media */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Global scroll reveal (use data-reveal on any section or block) */
@@ -304,7 +313,7 @@ a:hover { color: var(--luxury-gold); }
 .luxury-hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(13, 110, 253, 0.88) 0%, rgba(13, 110, 253, 0.75) 50%, rgba(26, 26, 26, 0.85) 100%);
+  background: linear-gradient(135deg, rgba(237, 82, 77, 0.88) 0%, rgba(237, 82, 77, 0.75) 50%, rgba(26, 26, 26, 0.85) 100%);
 }
 .luxury-hero-bg .container.position-relative { z-index: 1; }
 .luxury-hero-bg .luxury-hero-title { color: var(--luxury-white); text-shadow: 0 2px 12px rgba(0, 0, 0, 0.2); }
@@ -373,7 +382,7 @@ a:hover { color: var(--luxury-gold); }
 .page-hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(13, 110, 253, 0.85) 0%, rgba(13, 110, 253, 0.7) 50%, rgba(26, 26, 26, 0.8) 100%);
+  background: linear-gradient(135deg, rgba(237, 82, 77, 0.85) 0%, rgba(237, 82, 77, 0.7) 50%, rgba(26, 26, 26, 0.8) 100%);
 }
 .page-hero-bg .container.position-relative { z-index: 1; }
 .page-hero-bg .page-hero-title { color: var(--luxury-white); }
@@ -394,7 +403,7 @@ a:hover { color: var(--luxury-gold); }
 .services-hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(13, 110, 253, 0.85) 0%, rgba(13, 110, 253, 0.7) 50%, rgba(26, 26, 26, 0.8) 100%);
+  background: linear-gradient(135deg, rgba(237, 82, 77, 0.85) 0%, rgba(237, 82, 77, 0.7) 50%, rgba(26, 26, 26, 0.8) 100%);
 }
 .services-hero .container.position-relative { z-index: 1; }
 .services-hero-title {
@@ -621,7 +630,7 @@ a:hover { color: var(--luxury-gold); }
 /* ——— CTA ——— */
 .luxury-cta {
   padding: 6rem 0;
-  background: linear-gradient(135deg, var(--luxury-charcoal) 0%, var(--luxury-charcoal-soft) 50%, #1a4fc4 100%);
+  background: linear-gradient(135deg, #1a1a1a 0%, #333333 50%, #c9302c 100%);
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -941,7 +950,8 @@ a:hover { color: var(--luxury-gold); }
   padding: 4rem 0 4.5rem;
   background: linear-gradient(180deg, var(--luxury-white) 0%, var(--luxury-cream) 30%, var(--luxury-white) 100%);
 }
-.service-detail-content img { display: none !important; }
+.service-detail-content img:not(.tech-partner-logo img) { display: none !important; }
+.tech-partner-logo img { display: block !important; }
 .service-detail-content > h2:first-of-type {
   font-size: clamp(1.75rem, 3vw, 2.25rem);
   color: var(--luxury-charcoal);
@@ -988,7 +998,7 @@ a:hover { color: var(--luxury-gold); }
 .service-detail-content h3:hover {
   transform: translateX(4px);
   box-shadow: var(--luxury-shadow-hover);
-  border-color: rgba(13, 110, 253, 0.15);
+  border-color: rgba(237, 82, 77, 0.15);
 }
 .service-detail-content h3 + p {
   margin-left: 0.5rem;
@@ -1111,6 +1121,36 @@ a:hover { color: var(--luxury-gold); }
 
 .tech-partner-tag:active {
   transform: translateY(-4px) scale(1.03);
+}
+
+/* Partner logos */
+.tech-partner-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.5rem;
+  background: var(--luxury-white);
+  border: 1px solid var(--luxury-border);
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  transition: all var(--luxury-transition);
+  min-width: 120px;
+  min-height: 70px;
+}
+.tech-partner-logo img {
+  max-width: 100px;
+  max-height: 40px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(0%);
+  opacity: 1;
+  transition: all var(--luxury-transition);
+}
+.tech-partner-logo:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border-color: var(--luxury-gold);
 }
 
 .service-detail-cta {
@@ -1286,7 +1326,7 @@ a:hover { color: var(--luxury-gold); }
 .about-hero-v2-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(13, 110, 253, 0.88) 0%, rgba(13, 110, 253, 0.75) 50%, rgba(26, 26, 26, 0.85) 100%);
+  background: linear-gradient(135deg, rgba(237, 82, 77, 0.88) 0%, rgba(237, 82, 77, 0.75) 50%, rgba(26, 26, 26, 0.85) 100%);
 }
 .about-hero-v2-bg .container.position-relative { z-index: 1; }
 .about-hero-v2-bg .about-hero-v2-title { color: var(--luxury-white); text-shadow: 0 2px 12px rgba(0, 0, 0, 0.2); }
@@ -1900,7 +1940,7 @@ a:hover { color: var(--luxury-gold); }
 /* ——— About page (legal-style UI: gradient hero, intro, video, stats, team, features, CTA) ——— */
 .about-page-legal { padding-top: 0; }
 .about-legal-hero {
-  background: linear-gradient(135deg, var(--luxury-charcoal) 0%, var(--luxury-charcoal-soft) 50%, #1a4d9e 100%);
+  background: linear-gradient(135deg, #1a1a1a 0%, #333333 50%, #c9302c 100%);
   color: var(--luxury-white);
   padding: 4rem 0 3rem;
   text-align: center;
@@ -2075,7 +2115,7 @@ a:hover { color: var(--luxury-gold); }
 }
 
 .about-legal-team {
-  background: linear-gradient(135deg, var(--luxury-charcoal) 0%, var(--luxury-charcoal-soft) 70%, #1a4d9e 100%);
+  background: linear-gradient(135deg, #1a1a1a 0%, #333333 70%, #c9302c 100%);
   color: var(--luxury-white);
   padding: 4rem 0;
 }
@@ -2148,7 +2188,7 @@ a:hover { color: var(--luxury-gold); }
 .about-legal-feature-desc { font-size: 0.9375rem; color: var(--luxury-text-muted); line-height: 1.6; }
 
 .about-legal-footer {
-  background: linear-gradient(135deg, var(--luxury-charcoal) 0%, var(--luxury-charcoal-soft) 60%, #1a4d9e 100%);
+  background: linear-gradient(135deg, #1a1a1a 0%, #333333 60%, #c9302c 100%);
   color: var(--luxury-white);
   padding: 3rem 0 2rem;
 }
@@ -2204,3 +2244,38 @@ a:hover { color: var(--luxury-gold); }
 }
 .about-legal-footer-social a:hover { background: var(--luxury-gold); }
 .about-legal-footer-copy { font-size: 0.8125rem; opacity: 0.7; text-align: right; }
+
+/* ——— Responsive: mobile-first fixes ——— */
+@media (max-width: 991px) {
+  .container { padding-left: 1rem; padding-right: 1rem; }
+  .navbar-logo { height: 52px; }
+  .page-hero-title { font-size: clamp(1.75rem, 5vw, 2.5rem); }
+  .page-hero-lead { font-size: 1rem; }
+  .luxury-section { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+  .service-detail-content h2 { font-size: 1.5rem; }
+  .service-detail-content h3 { font-size: 1.25rem; }
+  .tech-partners-grid { gap: 0.75rem; padding: 0 0.75rem; }
+  .tech-partner-tag { font-size: 0.875rem; padding: 0.65rem 1.25rem; }
+  .site-footer-main { flex-direction: column; text-align: center; }
+  .site-footer-main .col-lg-4 { text-align: center; }
+  .site-footer-links { padding-left: 0; justify-content: center; }
+  .site-footer-contact { text-align: center; }
+}
+@media (max-width: 767px) {
+  .container { padding-left: 0.75rem; padding-right: 0.75rem; }
+  .navbar-logo { height: 48px; }
+  .luxury-hero-title { font-size: clamp(1.5rem, 6vw, 2rem); line-height: 1.25; }
+  .luxury-hero-lead { font-size: 0.9375rem; }
+  .clarity-service-card { margin-bottom: 1rem; }
+  .about-block-v2-title { font-size: 1.375rem; }
+  .about-block-v2-text { font-size: 0.9375rem; }
+  .btn { padding: 0.5rem 1rem; font-size: 0.9375rem; }
+  .site-footer-heading { margin-top: 1.5rem; }
+  .site-footer-main .col-6 { flex: 0 0 100%; max-width: 100%; }
+}
+@media (max-width: 575px) {
+  .navbar-logo { height: 44px; }
+  .luxury-hero-title { font-size: 1.5rem; }
+  .page-hero { min-height: 320px; padding: 3rem 0; }
+  .tech-partner-tag { font-size: 0.8125rem; padding: 0.5rem 1rem; }
+}

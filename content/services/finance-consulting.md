@@ -1,6 +1,8 @@
 ---
 title: "Finance Consulting"
+subtitle: "Financial assessments and strategic guidance for informed decision-making"
 description: "Financial assessments and strategic guidance for informed decision-making."
+image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200&h=600&fit=crop"
 ---
 
 We provide financial assessments and strategic guidance to support planning, cost optimization, and investment decisions. Our work is independent and focused on clarity and control.

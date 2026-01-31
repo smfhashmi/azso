@@ -1,1 +1,37 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url><loc>https://azvasolutions.com/services/digital-advisory-strategy/</loc></url><url><loc>https://azvasolutions.com/services/business-process-consulting/</loc></url><url><loc>https://azvasolutions.com/services/intelligent-ai-solutions/</loc></url><url><loc>https://azvasolutions.com/services/custom-software-development/</loc></url><url><loc>https://azvasolutions.com/services/managed-services-operations/</loc></url><url><loc>https://azvasolutions.com/services/resource-augmentation-talent-support/</loc></url><url><loc>https://azvasolutions.com/about/</loc></url><url><loc>https://azvasolutions.com/categories/</loc></url><url><loc>https://azvasolutions.com/contact/</loc></url><url><loc>https://azvasolutions.com/services/finance-consulting/</loc></url><url><loc>https://azvasolutions.com/</loc></url><url><loc>https://azvasolutions.com/services/operations-excellence/</loc></url><url><loc>https://azvasolutions.com/services/</loc></url><url><loc>https://azvasolutions.com/services/sales-marketing/</loc></url><url><loc>https://azvasolutions.com/tags/</loc></url><url><loc>https://azvasolutions.com/services/technology-solutions/</loc></url></urlset>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://localhost:1313/services/digital-advisory-strategy/</loc>
+  </url><url>
+    <loc>http://localhost:1313/services/business-process-consulting/</loc>
+  </url><url>
+    <loc>http://localhost:1313/services/intelligent-ai-solutions/</loc>
+  </url><url>
+    <loc>http://localhost:1313/services/custom-software-development/</loc>
+  </url><url>
+    <loc>http://localhost:1313/services/managed-services-operations/</loc>
+  </url><url>
+    <loc>http://localhost:1313/services/resource-augmentation-talent-support/</loc>
+  </url><url>
+    <loc>http://localhost:1313/about/</loc>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/contact/</loc>
+  </url><url>
+    <loc>http://localhost:1313/services/finance-consulting/</loc>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+  </url><url>
+    <loc>http://localhost:1313/services/operations-excellence/</loc>
+  </url><url>
+    <loc>http://localhost:1313/services/</loc>
+  </url><url>
+    <loc>http://localhost:1313/services/sales-marketing/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+  </url><url>
+    <loc>http://localhost:1313/services/technology-solutions/</loc>
+  </url>
+</urlset>

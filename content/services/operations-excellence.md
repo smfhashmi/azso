@@ -1,6 +1,8 @@
 ---
 title: "Operations Excellence"
+subtitle: "Process, workflow, and operations analysis for efficiency and measurable results"
 description: "Process, workflow, and operations analysis for efficiency and measurable results."
+image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1200&h=600&fit=crop"
 ---
 
 We analyze operations, processes, and workflows to find inefficiencies and improvement opportunities. Our approach is systematic and outcome-focused-we aim for measurable gains, not activity for its own sake.
