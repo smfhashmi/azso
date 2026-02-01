@@ -55,33 +55,6 @@ We ensure technology solutions align with your business processes and requiremen
 - User experience optimization
 - Business process reengineering
 
-## Industries We Serve
-
-We work with organizations across multiple industries, including:
-
-- **FMCG** - Fast-moving consumer goods
-- **Healthcare** - Healthcare providers and systems
-- **Manufacturing & Distribution** - Production and supply chain
-- **Retail & E-commerce** - Customer-facing operations
-- **Financial & Business Services** - Financial institutions and services
-- **Commodity Trading** - Trading and commodity management
-
-## Why Choose Our Business Consulting
-
-✅ **Practical approach** - Real-world solutions that work
-✅ **Business-focused** - Process improvements that drive results
-✅ **Scalable solutions** - Designed for growth and change
-✅ **Experienced consultants** - Deep expertise across industries
-✅ **Measurable outcomes** - Focus on KPIs and business value
-
-## Our Methodology
-
-1. **Understand** - We learn your business, challenges, and goals
-2. **Analyze** - We assess current processes and identify opportunities
-3. **Design** - We create optimized processes aligned with your strategy
-4. **Implement** - We work alongside your team to deliver real results
-5. **Optimize** - We refine, scale, and continuously improve
-
 ## Get Started
 
 Ready to optimize your business processes? [Contact us](/contact/) to discuss how we can help you work smarter and scale confidently.

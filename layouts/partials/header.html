@@ -14,7 +14,7 @@
               <a class="nav-link dropdown-toggle {{ if hasPrefix $.RelPermalink .URL }}active{{ end }}" href="{{ .URL | relURL }}" id="navbar-services-dropdown" role="button" aria-expanded="false">{{ .Name }}</a>
               <ul class="dropdown-menu dropdown-menu-end luxury-dropdown luxury-dropdown-slide" aria-labelledby="navbar-services-dropdown">
                 {{ with $.Site.GetPage "/services" }}
-                  {{ $serviceOrder := slice "business-process-consulting" "digital-advisory-strategy" "intelligent-ai-solutions" "custom-software-development" "managed-services-operations" "resource-augmentation-talent-support" }}
+                  {{ $serviceOrder := slice "business-process-consulting" "digital-advisory-strategy" "intelligent-ai-solutions" "software-development" "managed-services-operations" "resource-augmentation-talent-support" }}
                   {{ range $serviceOrder }}
                     {{ with $.Site.GetPage (printf "/services/%s" .) }}
                       <li><a class="dropdown-item {{ if eq $.RelPermalink .RelPermalink }}active{{ end }}" href="{{ .RelPermalink }}">{{ .Title }}</a></li>

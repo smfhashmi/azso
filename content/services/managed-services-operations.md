@@ -75,33 +75,6 @@ We manage system updates, enhancements, and changes while minimizing disruption 
 - Continuous monitoring
 - Dedicated account management
 
-## Why Choose Our Managed Services
-
-✅ **Proactive support** - We prevent issues before they impact your business
-✅ **Expert team** - Experienced professionals who know your systems
-✅ **Continuous optimization** - Ongoing improvements and enhancements
-✅ **Predictable costs** - Fixed monthly pricing for budget planning
-✅ **Business focus** - Support aligned with your business priorities
-
-## Our Managed Services Approach
-
-1. **Monitor** - Continuous monitoring of system health and performance
-2. **Maintain** - Proactive maintenance and updates
-3. **Optimize** - Regular optimization and improvement
-4. **Support** - Responsive support and issue resolution
-5. **Report** - Regular reporting and insights
-
-## Industries We Support
-
-We provide managed services across multiple industries:
-
-- **FMCG** - Supply chain and distribution systems
-- **Healthcare** - Clinical and administrative systems
-- **Manufacturing** - Production and ERP systems
-- **Retail & E-commerce** - E-commerce and POS platforms
-- **Financial Services** - Trading and financial systems
-- **Commodity Trading** - Trading platforms and systems
-
 ## Get Started
 
 Need ongoing support for your systems? [Contact us](/contact/) to discuss our managed services options and find the right support level for your business.

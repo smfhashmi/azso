@@ -66,48 +66,6 @@ We work with modern, proven technologies:
 - **Cloud:** AWS, Azure, Google Cloud Platform
 - **Integration:** REST APIs, GraphQL, SOAP, Message Queues
 
-## Our Development Approach
-
-### Agile Methodology
-
-We follow agile development practices to ensure rapid delivery, continuous feedback, and alignment with your business needs.
-
-**Our Process:**
-1. **Discovery** - We understand your requirements and business context
-2. **Design** - We create detailed specifications and user experience designs
-3. **Develop** - We build iteratively with regular demos and feedback
-4. **Test** - We ensure quality through comprehensive testing
-5. **Deploy** - We launch and support your solution
-6. **Maintain** - We provide ongoing support and enhancements
-
-### Quality Assurance
-
-We ensure your software is reliable, secure, and performant through comprehensive testing and quality assurance practices.
-
-**QA Services:**
-- Unit and integration testing
-- User acceptance testing
-- Performance and load testing
-- Security testing and vulnerability assessment
-- Code reviews and quality audits
-
-## Why Choose Our Custom Development
-
-✅ **Business-aligned** - Solutions designed for your specific needs
-✅ **Scalable architecture** - Built to grow with your business
-✅ **Modern technology** - Latest frameworks and best practices
-✅ **Experienced developers** - Skilled team with business acumen
-✅ **Ongoing support** - Maintenance and enhancement services
-
-## Industries We Serve
-
-- **FMCG** - Supply chain and distribution systems
-- **Healthcare** - Patient management and clinical systems
-- **Manufacturing** - Production and quality management
-- **Retail & E-commerce** - E-commerce platforms and POS systems
-- **Financial Services** - Trading and financial management systems
-- **Commodity Trading** - Trading and commodity management platforms
-
 ## Get Started
 
 Need a custom solution? [Contact us](/contact/) to discuss how we can build software that fits your business perfectly.

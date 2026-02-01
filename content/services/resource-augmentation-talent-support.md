@@ -33,47 +33,6 @@ Skilled business analysts who bridge the gap between business needs and technica
 - User acceptance testing coordination
 - Training and documentation
 
-### Marketing Operations & CRM Specialists
-
-Marketing and CRM experts who optimize your lead-to-revenue processes, improve campaign performance, and maximize CRM value.
-
-**Key Capabilities:**
-- Marketing automation setup and optimization
-- CRM configuration and customization
-- Campaign performance analysis
-- Lead management and scoring
-- Sales and marketing alignment
-
-### Data, Reporting & Integration Advisors
-
-Data and integration specialists who ensure your systems are connected, your data is accurate, and your reporting delivers actionable insights.
-
-**Expertise Areas:**
-- Data architecture and modeling
-- ETL and data integration
-- Reporting and analytics design
-- Data quality and governance
-- API development and integration
-
-### Change Management & Adoption Support
-
-Change management professionals who ensure new systems and processes are adopted successfully by your organization.
-
-**Our Approach:**
-- Change impact assessment
-- Stakeholder engagement
-- Training program development
-- Adoption monitoring and support
-- Continuous improvement facilitation
-
-## Why Choose Our Resource Augmentation
-
-✅ **Vendor-neutral** - We work for you, not vendors
-✅ **Experienced professionals** - Proven track record across industries
-✅ **Seamless integration** - Work alongside your team effectively
-✅ **Flexible engagement** - Short-term or long-term assignments
-✅ **Business-focused** - Focus on outcomes, not just deliverables
-
 ## Engagement Models
 
 ### Project-Based
@@ -93,25 +52,6 @@ Change management professionals who ensure new systems and processes are adopted
 - Strategic input and recommendations
 - Mentoring and knowledge transfer
 - Best practice sharing
-
-## Industries We Support
-
-We provide talent across multiple industries:
-
-- **FMCG** - Supply chain, distribution, and sales operations
-- **Healthcare** - Clinical systems and patient management
-- **Manufacturing** - Production, quality, and ERP systems
-- **Retail & E-commerce** - E-commerce, marketing, and CRM
-- **Financial Services** - Trading, risk, and financial systems
-- **Commodity Trading** - Trading platforms and operations
-
-## Our Resource Augmentation Process
-
-1. **Assess** - We understand your needs and requirements
-2. **Match** - We identify the right professionals for your team
-3. **Integrate** - We onboard and integrate seamlessly
-4. **Deliver** - We provide expertise and execution support
-5. **Transfer** - We ensure knowledge transfer and continuity
 
 ## Get Started
 

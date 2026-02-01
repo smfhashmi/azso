@@ -44,21 +44,6 @@ We design scalable, integrated system architectures that support your business g
 - Cloud migration planning
 - Security and compliance advisory
 
-## Why Choose Our Digital Advisory Services
-
-✅ **Vendor-neutral consulting** - We represent your interests, not vendors
-✅ **Business-first approach** - Technology decisions driven by business needs
-✅ **Proven methodology** - Clear, structured approach to digital transformation
-✅ **Measurable outcomes** - Focus on ROI and business value
-✅ **Independent expertise** - No conflicts of interest
-
-## Our Methodology
-
-1. **Understand** - We learn your business, challenges, and goals
-2. **Design** - We architect the right solution, not just the latest tech
-3. **Plan** - We create actionable roadmaps with clear milestones
-4. **Optimize** - We refine strategies based on results and changing needs
-
 ## Get Started
 
 Ready to transform your digital strategy? [Contact us](/contact/) to discuss how we can help you design a path to intelligent business transformation.
