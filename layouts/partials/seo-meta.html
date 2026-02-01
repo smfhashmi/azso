@@ -1,0 +1,100 @@
+{{- $page := . -}}
+{{- $site := .Site -}}
+{{- $title := "" -}}
+{{- $description := "" -}}
+{{- $image := "" -}}
+{{- $url := "" -}}
+{{- $type := "website" -}}
+
+{{- if $page.IsHome -}}
+  {{- $title = $site.Title -}}
+  {{- $description = $site.Params.description -}}
+  {{- $image = printf "%s%s" $site.BaseURL ($site.Params.logo | default "/images/azva_Logo1.png") -}}
+  {{- $url = $site.BaseURL -}}
+{{- else -}}
+  {{- $title = printf "%s - %s" $page.Title $site.Params.companyName -}}
+  {{- $description = $page.Params.description | default $page.Summary | default $site.Params.description -}}
+  {{- $image = $page.Params.image | default (printf "%s%s" $site.BaseURL ($site.Params.logo | default "/images/azva_Logo1.png")) -}}
+  {{- $url = $page.Permalink | absURL -}}
+  {{- if eq $page.Type "services" -}}
+    {{- $type = "article" -}}
+  {{- else if eq $page.Type "about" -}}
+    {{- $type = "article" -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $canonical := $url -}}
+{{- $ogImage := $image -}}
+{{- if not (hasPrefix $ogImage "http") -}}
+  {{- $ogImage = printf "%s%s" $site.BaseURL (strings.TrimPrefix "/" $ogImage) -}}
+{{- end -}}
+
+<!-- Primary Meta Tags -->
+<meta name="title" content="{{ $title }}">
+<meta name="description" content="{{ $description | truncate 160 }}">
+<meta name="keywords" content="{{ $page.Params.keywords | default (printf "%s, business consulting, digital transformation, technology solutions, management consultancy, %s" $site.Params.companyName $site.Params.location) }}">
+<meta name="author" content="{{ $site.Params.companyName }}">
+<meta name="robots" content="index, follow">
+<meta name="language" content="{{ $site.LanguageCode }}">
+<meta name="revisit-after" content="7 days">
+<meta name="theme-color" content="#000000">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="{{ $canonical }}">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="{{ $type }}">
+<meta property="og:url" content="{{ $url }}">
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $description | truncate 200 }}">
+<meta property="og:image" content="{{ $ogImage }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="{{ $site.Params.companyName }}">
+<meta property="og:locale" content="{{ replace $site.LanguageCode "-" "_" }}">
+{{- if eq $type "article" -}}
+<meta property="article:published_time" content="{{ $page.Date.Format "2006-01-02T15:04:05Z07:00" }}">
+<meta property="article:modified_time" content="{{ $page.Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
+<meta property="article:author" content="{{ $site.Params.companyName }}">
+<meta property="article:section" content="{{ $page.Type | title }}">
+{{- if $page.Params.tags -}}
+  {{- range $page.Params.tags -}}
+<meta property="article:tag" content="{{ . }}">
+  {{- end -}}
+{{- end -}}
+{{- end -}}
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="{{ $url }}">
+<meta name="twitter:title" content="{{ $title }}">
+<meta name="twitter:description" content="{{ $description | truncate 200 }}">
+<meta name="twitter:image" content="{{ $ogImage }}">
+{{- if $site.Params.twitter -}}
+<meta name="twitter:site" content="{{ $site.Params.twitter }}">
+<meta name="twitter:creator" content="{{ $site.Params.twitter }}">
+{{- end -}}
+
+<!-- Additional SEO Meta Tags -->
+<meta name="geo.region" content="AE-DU">
+<meta name="geo.placename" content="Dubai">
+<meta name="geo.position" content="25.2048;55.2708">
+<meta name="ICBM" content="25.2048, 55.2708">
+
+<!-- Mobile Optimization -->
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="{{ $site.Params.companyName }}">
+
+<!-- Favicon and Icons -->
+<link rel="icon" type="image/png" href="{{ ($site.Params.favicon | default "/images/favicon.png") | relURL }}">
+<link rel="apple-touch-icon" href="{{ ($site.Params.appleTouchIcon | default "/images/apple-touch-icon.png") | relURL }}">
+
+<!-- DNS Prefetch and Preconnect -->
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://fonts.gstatic.com">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+

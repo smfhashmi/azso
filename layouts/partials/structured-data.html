@@ -1,0 +1,268 @@
+{{- $page := . -}}
+{{- $site := .Site -}}
+{{- $baseURL := $site.BaseURL -}}
+
+{{- /* Organization Schema */ -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "{{ $site.Params.companyName }}",
+  "alternateName": "AZVA Solutions",
+  "url": "{{ $baseURL }}",
+  "logo": "{{ printf "%s%s" $baseURL (strings.TrimPrefix "/" ($site.Params.logo | default "/images/azva_Logo1.png")) }}",
+  "description": {{ $site.Params.description | jsonify }},
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Technohub 1, Dtec, Dubai Silicon Oasis",
+    "addressLocality": "Dubai",
+    "addressRegion": "Dubai",
+    "addressCountry": "AE"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "{{ $site.Params.phone }}",
+    "contactType": "Customer Service",
+    "email": "{{ $site.Params.email }}",
+    "areaServed": "AE",
+    "availableLanguage": ["en", "ar"]
+  },
+  "sameAs": [
+    {{- if $site.Params.linkedin -}}
+    "{{ $site.Params.linkedin }}",
+    {{- end -}}
+    {{- if $site.Params.twitter -}}
+    "{{ $site.Params.twitter }}",
+    {{- end -}}
+    {{- if $site.Params.facebook -}}
+    "{{ $site.Params.facebook }}"
+    {{- end -}}
+  ],
+  "areaServed": {
+    "@type": "Country",
+    "name": "United Arab Emirates"
+  },
+  "serviceType": [
+    "Business Consulting",
+    "Digital Advisory & Strategy",
+    "Intelligent AI Solutions",
+    "Software Development",
+    "Managed Services & Operations",
+    "Resource Augmentation & Talent Support"
+  ],
+  "priceRange": "$$"
+}
+</script>
+
+{{- /* WebSite Schema */ -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "{{ $site.Params.companyName }}",
+  "url": "{{ $baseURL }}",
+  "description": {{ $site.Params.description | jsonify }},
+  "publisher": {
+    "@type": "ProfessionalService",
+    "name": "{{ $site.Params.companyName }}"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "{{ $baseURL }}search?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+{{- /* Breadcrumb Schema for non-home pages */ -}}
+{{- if not $page.IsHome -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "{{ $baseURL }}"
+    }{{- $position := 2 -}}
+    {{- if eq $page.Type "services" -}}
+    ,{
+      "@type": "ListItem",
+      "position": {{ $position }},
+      "name": "Services",
+      "item": "{{ printf "%s%s" $baseURL "services/" }}"
+    }
+    {{- $position = add $position 1 -}}
+    {{- end -}}
+    {{- if $page.Title -}}
+    ,{
+      "@type": "ListItem",
+      "position": {{ $position }},
+      "name": "{{ $page.Title }}",
+      "item": "{{ $page.Permalink | absURL }}"
+    }
+    {{- end -}}
+  ]
+}
+</script>
+{{- end -}}
+
+{{- /* Page-specific schemas */ -}}
+{{- if $page.IsHome -}}
+  {{- /* Homepage - Organization with aggregateRating removed (no reviews) */ -}}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "{{ $site.Title }}",
+    "description": {{ $site.Params.description | jsonify }},
+    "url": "{{ $baseURL }}",
+    "mainEntity": {
+      "@type": "ProfessionalService",
+      "name": "{{ $site.Params.companyName }}"
+    }
+  }
+  </script>
+{{- else if eq $page.Type "services" -}}
+  {{- /* Service Page Schema */ -}}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "{{ $page.Title }}",
+    "name": "{{ $page.Title }}",
+    "description": {{ ($page.Params.description | default $page.Summary | default $site.Params.description | truncate 300) | jsonify }},
+    "provider": {
+      "@type": "ProfessionalService",
+      "name": "{{ $site.Params.companyName }}",
+      "url": "{{ $baseURL }}"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "United Arab Emirates"
+    },
+    "url": "{{ $page.Permalink | absURL }}"
+  }
+  </script>
+  
+  {{- /* Article Schema for Service Pages */ -}}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{ $page.Title }}",
+    "description": {{ ($page.Params.description | default $page.Summary | default $site.Params.description | truncate 300) | jsonify }},
+    "author": {
+      "@type": "Organization",
+      "name": "{{ $site.Params.companyName }}"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "{{ $site.Params.companyName }}",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ printf "%s%s" $baseURL (strings.TrimPrefix "/" ($site.Params.logo | default "/images/azva_Logo1.png")) }}"
+      }
+    },
+    "datePublished": "{{ $page.Date.Format "2006-01-02" }}",
+    "dateModified": "{{ $page.Lastmod.Format "2006-01-02" }}",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ $page.Permalink | absURL }}"
+    }
+  }
+  </script>
+{{- else if eq $page.Type "about" -}}
+  {{- /* About Page Schema */ -}}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "{{ $page.Title }}",
+    "description": {{ ($page.Params.description | default $page.Summary | default $site.Params.description | truncate 300) | jsonify }},
+    "url": "{{ $page.Permalink | absURL }}",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "{{ $site.Params.companyName }}",
+      "description": {{ $site.Params.description | jsonify }},
+      "url": "{{ $baseURL }}",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Technohub 1, Dtec, Dubai Silicon Oasis",
+        "addressLocality": "Dubai",
+        "addressRegion": "Dubai",
+        "addressCountry": "AE"
+      }
+    }
+  }
+  </script>
+{{- else if eq $page.Type "contact" -}}
+  {{- /* Contact Page Schema */ -}}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "{{ $page.Title }}",
+    "description": {{ ($page.Params.description | default $page.Summary | default (printf "Contact %s for business consulting and technology solutions" $site.Params.companyName) | truncate 300) | jsonify }},
+    "url": "{{ $page.Permalink | absURL }}",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "{{ $site.Params.companyName }}",
+      "url": "{{ $baseURL }}",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "{{ $site.Params.phone }}",
+          "contactType": "Customer Service",
+          "email": "{{ $site.Params.email }}",
+          "areaServed": "AE",
+          "availableLanguage": ["en", "ar"]
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "{{ $site.Params.phone }}",
+          "contactType": "Sales",
+          "email": "{{ $site.Params.email }}",
+          "areaServed": "AE"
+        }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Technohub 1, Dtec, Dubai Silicon Oasis",
+        "addressLocality": "Dubai",
+        "addressRegion": "Dubai",
+        "addressCountry": "AE"
+      }
+    }
+  }
+  </script>
+{{- end -}}
+
+{{- /* FAQPage Schema if page has FAQs */ -}}
+{{- if $page.Params.faqs -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {{- range $index, $faq := $page.Params.faqs -}}
+    {{- if $index }},{{- end }}
+    {
+      "@type": "Question",
+      "name": "{{ $faq.question }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ $faq.answer }}"
+      }
+    }
+    {{- end -}}
+  ]
+}
+</script>
+{{- end -}}
+
