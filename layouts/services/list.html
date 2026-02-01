@@ -1,8 +1,12 @@
 {{ define "main" }}
 <div>
-  <section class="page-hero services-page-hero services-page-hero-bg" {{ with .Params.hero_image }}style="background-image: url('{{ . }}');"{{ end }} data-reveal>
-    {{ with .Params.hero_image }}<div class="services-page-hero-overlay"></div>{{ end }}
-    <div class="container {{ with .Params.hero_image }}position-relative{{ end }}">
+  <section class="page-hero services-page-hero services-page-hero-bg services-page-hero-video" data-reveal>
+    <video class="services-hero-video" autoplay muted loop playsinline preload="auto">
+      <source src="https://videos.pexels.com/video-files/3045163/3045163-hd_1920_1080_30fps.mp4" type="video/mp4">
+      <source src="https://videos.pexels.com/video-files/2491284/2491284-hd_1920_1080_30fps.mp4" type="video/mp4">
+    </video>
+    <div class="services-page-hero-overlay"></div>
+    <div class="container position-relative">
       <div class="row justify-content-center text-center">
         <div class="col-lg-10">
           <h1 class="page-hero-title fade-in-up" style="transition-delay: 0.1s;">{{ .Title }}</h1>

@@ -161,4 +161,41 @@
       newsletterForm.reset();
     });
   }
+
+  // Services page: Ensure video autoplays immediately
+  var servicesVideo = document.querySelector('.services-hero-video');
+  if (servicesVideo) {
+    // Set video to play immediately
+    servicesVideo.muted = true;
+    servicesVideo.autoplay = true;
+    servicesVideo.playsInline = true;
+    
+    // Try to play immediately
+    var playPromise = servicesVideo.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(function(error) {
+        console.log('Video autoplay prevented, retrying:', error);
+        // Retry after a short delay
+        setTimeout(function() {
+          servicesVideo.play().catch(function(err) {
+            console.log('Video play retry failed:', err);
+          });
+        }, 100);
+      });
+    }
+    
+    // Also try when video can play
+    servicesVideo.addEventListener('canplay', function() {
+      this.play().catch(function(error) {
+        console.log('Video play on canplay failed:', error);
+      });
+    }, { once: true });
+    
+    // Ensure it plays when loaded
+    servicesVideo.addEventListener('loadeddata', function() {
+      this.play().catch(function(error) {
+        console.log('Video play on loadeddata failed:', error);
+      });
+    }, { once: true });
+  }
 })();

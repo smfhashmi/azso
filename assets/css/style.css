@@ -1012,24 +1012,48 @@ a:hover { color: var(--luxury-gold); }
   color: var(--luxury-text-muted);
 }
 
-/* Services Page Hero with Background Image */
+/* Services Page Hero with Background Image/Video */
 .services-page-hero-bg {
   position: relative;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   border-bottom: none;
-  min-height: 400px;
+  min-height: 500px;
   display: flex;
   align-items: center;
+  overflow: hidden;
 }
 .services-page-hero-bg::after {
   display: none;
 }
+
+/* Video Background */
+.services-page-hero-video {
+  position: relative;
+}
+.services-hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  background: var(--luxury-charcoal);
+}
+/* Ensure video is visible and properly sized */
+.services-hero-video::-webkit-media-controls {
+  display: none !important;
+}
+.services-hero-video::-webkit-media-controls-enclosure {
+  display: none !important;
+}
+
 .services-page-hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(237, 82, 77, 0.85) 0%, rgba(237, 82, 77, 0.75) 50%, rgba(26, 26, 26, 0.88) 100%);
+  background: linear-gradient(135deg, rgba(237, 82, 77, 0.35) 0%, rgba(237, 82, 77, 0.25) 50%, rgba(26, 26, 26, 0.45) 100%);
   z-index: 1;
 }
 .services-page-hero-bg .container.position-relative {

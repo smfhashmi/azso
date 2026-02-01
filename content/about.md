@@ -2,7 +2,7 @@
 title: "About Us"
 type: about
 hero_title: "Crafting Excellence Together"
-hero_lead: "We partner with organizations to deliver intelligent management and technology solutions combining strategy, systems, and support that drive real results."
+hero_lead: "We partner with organizations to deliver intelligent management consultancy and technology solutions combining strategy, systems, and support that drive real results."
 hero_bg_image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&h=1080&fit=crop"
 hero_image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop"
 stats:

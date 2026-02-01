@@ -1,6 +1,6 @@
 ---
-title: "Our Services"
-subtitle: "Intelligent Management & Consulting Services"
+title: "Bringing Expertise and Technology Together."
+subtitle: "So you can navigate disruption, enhance efficiency, and deliver sustainable growth"
 hero_title: "Your Strategic Partner in Business Growth & Digital Transformation"
 hero_lead: "We help businesses design, implement, and optimize intelligent management systems that streamline operations, improve decision-making, and drive sustainable growth."
 hero_subtext: "From AI-powered automation to ERP, CRM, and end-to-end marketing & sales optimization, we turn complex technology into practical business solutions."
