@@ -36,14 +36,15 @@
           }
         });
         
-        // Prevent Bootstrap dropdown toggle on desktop, allow link navigation
+        // Prevent Bootstrap dropdown toggle on desktop (hover only, no click)
         toggle.addEventListener('click', function (e) {
           if (window.innerWidth >= 992) {
-            // Don't toggle dropdown, allow link to work
+            e.preventDefault();
             e.stopPropagation();
-            // Let the browser handle the link
-            return true;
+            // On desktop, don't toggle - hover handles it
+            return false;
           }
+          // On mobile, allow Bootstrap to handle the dropdown toggle
         });
       }
     });
@@ -149,6 +150,15 @@
     window.addEventListener('scroll', function () {
       backTop.classList.toggle('visible', window.scrollY > 400);
     }, { passive: true });
+    
+    // Add click handler to scroll to top
+    backTop.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
   }
 
   var newsletterForm = document.getElementById('newsletterForm');

@@ -128,6 +128,20 @@ a:hover { color: var(--luxury-gold); }
   transition: color var(--luxury-transition-fast), border-color var(--luxury-transition-fast);
   position: relative;
 }
+.luxury-header .nav-link button.dropdown-toggle,
+.clarity-header .nav-link button.dropdown-toggle {
+  color: inherit !important;
+  font-weight: inherit;
+  font-size: inherit;
+  padding: 0 !important;
+  background: none !important;
+  border: none !important;
+  cursor: pointer;
+  font-family: inherit;
+  letter-spacing: inherit;
+  width: 100%;
+  text-align: left;
+}
 
 .luxury-header .nav-link:hover,
 .luxury-header .nav-link.active,
@@ -178,10 +192,12 @@ a:hover { color: var(--luxury-gold); }
   border-top-color: currentColor;
 }
 
-/* Dropdown hover trigger */
-.dropdown-hover:hover > .dropdown-menu {
-  display: block;
-  animation: slideInFromLeft 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+/* Dropdown hover trigger (desktop only) */
+@media (min-width: 992px) {
+  .dropdown-hover:hover > .dropdown-menu {
+    display: block;
+    animation: slideInFromLeft 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
 }
 
 /* Luxury dropdown menu */
@@ -260,6 +276,35 @@ a:hover { color: var(--luxury-gold); }
 .clarity-main { padding-top: 0; }
 .clarity-header-offset { padding-top: 0; }
 .clarity-header-offset.has-topbar { padding-top: 0; }
+
+/* Mobile: Add padding to account for fixed header */
+@media (max-width: 991px) {
+  .clarity-header-offset {
+    padding-top: 75px; /* Account for header height on mobile (logo ~52px + padding) */
+  }
+  /* Topbar is hidden on mobile (d-none d-md-block), so has-topbar doesn't need extra padding */
+  .clarity-header-offset.has-topbar {
+    padding-top: 75px;
+  }
+}
+
+@media (max-width: 767px) {
+  .clarity-header-offset {
+    padding-top: 70px; /* Slightly less on smaller screens (logo ~48px + padding) */
+  }
+  .clarity-header-offset.has-topbar {
+    padding-top: 70px;
+  }
+}
+
+@media (max-width: 575px) {
+  .clarity-header-offset {
+    padding-top: 65px; /* Even less on very small screens (logo ~44px + padding) */
+  }
+  .clarity-header-offset.has-topbar {
+    padding-top: 65px;
+  }
+}
 
 /* ——— Luxury Hero ——— */
 .luxury-hero {
@@ -1569,6 +1614,9 @@ a:hover { color: var(--luxury-gold); }
   visibility: hidden;
   transition: opacity var(--luxury-transition), visibility var(--luxury-transition), transform var(--luxury-transition);
   box-shadow: var(--luxury-shadow-strong);
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
 }
 
 .luxury-back-top.visible { opacity: 1; visibility: visible; }
@@ -2956,8 +3004,49 @@ a:hover { color: var(--luxury-gold); }
   .tech-partner-tag { font-size: 0.875rem; padding: 0.65rem 1.25rem; }
   .site-footer-main { flex-direction: column; text-align: center; }
   .site-footer-main .col-lg-4 { text-align: center; }
-  .site-footer-links { padding-left: 0; justify-content: center; }
+  .site-footer-main .col-6 { text-align: center; }
+  .site-footer-main .col-12 { text-align: center; }
+  .site-footer-brand { text-align: center; }
+  .site-footer-social { justify-content: center; }
+  .site-footer-links { 
+    padding-left: 0; 
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .site-footer-links li { 
+    text-align: center;
+    width: 100%;
+  }
+  .site-footer-links a {
+    text-align: center;
+    display: inline-block;
+  }
+  .site-footer-links a:hover {
+    padding-left: 0;
+  }
   .site-footer-contact { text-align: center; }
+  .site-footer-bottom { text-align: center; }
+  .site-footer-copy { text-align: center; }
+  .luxury-header .navbar-collapse {
+    margin-top: 1rem;
+    border-top: 1px solid var(--luxury-border);
+    padding-top: 1rem;
+  }
+  .luxury-header .navbar-nav .nav-item {
+    margin-bottom: 0.25rem;
+  }
+  .luxury-header .dropdown-menu {
+    position: static !important;
+    float: none;
+    width: 100%;
+    margin-top: 0.5rem;
+    background-color: var(--luxury-cream);
+    border: 1px solid var(--luxury-border);
+    box-shadow: none;
+  }
 }
 @media (max-width: 767px) {
   .container { padding-left: 0.75rem; padding-right: 0.75rem; }
@@ -2968,12 +3057,44 @@ a:hover { color: var(--luxury-gold); }
   .about-block-v2-title { font-size: 1.375rem; }
   .about-block-v2-text { font-size: 0.9375rem; }
   .btn { padding: 0.5rem 1rem; font-size: 0.9375rem; }
-  .site-footer-heading { margin-top: 1.5rem; }
-  .site-footer-main .col-6 { flex: 0 0 100%; max-width: 100%; }
+  .site-footer-heading { 
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+  .site-footer-main .col-6 { 
+    flex: 0 0 100%; 
+    max-width: 100%;
+    text-align: center;
+  }
+  .luxury-back-top {
+    bottom: 1rem;
+    right: 1rem;
+    width: 48px;
+    height: 48px;
+    font-size: 1.1rem;
+  }
+  .luxury-header .navbar-nav {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .luxury-header .nav-link button.dropdown-toggle {
+    text-align: left;
+  }
 }
 @media (max-width: 575px) {
   .navbar-logo { height: 44px; }
   .luxury-hero-title { font-size: 1.5rem; }
   .page-hero { min-height: 320px; padding: 3rem 0; }
   .tech-partner-tag { font-size: 0.8125rem; padding: 0.5rem 1rem; }
+  .luxury-back-top {
+    bottom: 0.75rem;
+    right: 0.75rem;
+    width: 44px;
+    height: 44px;
+    font-size: 1rem;
+  }
+  .luxury-header .navbar-nav .btn {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
 }
