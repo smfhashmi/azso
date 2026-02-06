@@ -33,26 +33,6 @@ Skilled business analysts who bridge the gap between business needs and technica
 - User acceptance testing coordination
 - Training and documentation
 
-## Engagement Models
-
-### Project-Based
-- Fixed-duration assignments
-- Specific project deliverables
-- Clear scope and timeline
-- Project completion focus
-
-### Ongoing Support
-- Long-term resource placement
-- Continuous support and optimization
-- Flexible hours and availability
-- Extended team integration
-
-### Advisory & Consulting
-- Part-time expert guidance
-- Strategic input and recommendations
-- Mentoring and knowledge transfer
-- Best practice sharing
-
 ## Get Started
 
 Need to strengthen your team? [Contact us](/contact/) to discuss how our resource augmentation services can support your projects and operations.

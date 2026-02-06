@@ -14,7 +14,7 @@ ignoreLogs = ['warning-goldmark-raw-html']
   logo = "/images/azva_Logo1.png"
   description = "Full-service consulting and solutions firm specializing in sales, marketing, technology, and finance. Your strategic partner for operational excellence and informed decision-making."
   location = "Technohub 1, Dtec, Dubai Silicon Oasis, Dubai, UAE"
-  email = "info@azvasolutions.com"
+  email = "sales@azvasolutions.com"
   phone = "+971 58 528 7862"
 
 [menu]

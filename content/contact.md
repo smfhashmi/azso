@@ -9,5 +9,5 @@ hero_image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920&h=
 We'd like to hear from you. Use the form below or reach us directly.
 
 **Location:** Technohub 1, Dtec, Dubai Silicon Oasis, Dubai, UAE  
-**Email:** [info@azvasolutions.com](mailto:info@azvasolutions.com)  
+**Email:** [sales@azvasolutions.com](mailto:sales@azvasolutions.com)  
 **Phone:** +971 58 528 7862

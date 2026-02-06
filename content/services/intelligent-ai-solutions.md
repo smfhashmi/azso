@@ -64,14 +64,6 @@ We seamlessly integrate AI capabilities into your existing ERP, CRM, ECM, and bu
 - **Predictive Analytics** - Forecasting and trend analysis
 - **Intelligent Automation** - End-to-end process automation
 
-## Use Cases
-
-- **Customer Service** - AI-powered chatbots and support automation
-- **360° Digital Marketing** - Lead scoring, customer segmentation, and campaign optimization
-- **Operations** - Predictive maintenance, inventory optimization, and supply chain forecasting
-- **Finance** - Fraud detection, risk assessment, and financial forecasting
-- **HR** - Talent acquisition, performance prediction, and employee insights
-
 ## Get Started
 
 Ready to leverage AI for your business? [Contact us](/contact/) to discuss how intelligent AI solutions can transform your operations and decision-making.
